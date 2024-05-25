@@ -7,6 +7,11 @@
     <title>Portfolio of Anton Schyberg</title>
   </head>
   <body>
+
+    <div class="loader-container" id="loader-container">
+      <!--<div class="spinner"></div>-->
+    </div>
+
     <section class="home-page">
       <header>
 
@@ -19,10 +24,13 @@
           </a>
         </div>
 
-        <nav class="nav">
-          <button class="nav-content">
-            <p>About me</p>
-          </button>
+        <nav class="nav"> 
+          <a href="#aboutMe">
+            <button class="nav-content">
+              <p>About me</p>
+            </button>
+          </a>
+          
 
           <span class="seperation-line"></span>
 
@@ -63,15 +71,22 @@
         <div class="star10"><span></span></div>
       </div>
       
-      <h1 class="intro">Hi, my name is Anton Schyberg and I'm a student in Front End Developing</h1>
+      <div class="intro">
+        <h1 > Anton Schyberg</h1>
+        <p class="text1">A student in</p>
+        <p class="text2">Front End Developing</p>
+      </div>
+      
 
       <div class="intro-buttons">
-        <button>cool knapp</button>
-        <button>cool knapp 2</button>
+        <a href="#aboutMe">
+          <button class="about-me-button">cool knapp</button>
+        </a>
+        <button class="some-other-button">cool knapp 2</button>
       </div>
     </section>
 
-    <section class="about-me">
+    <section class="about-me" id="aboutMe">
       <div class="flex">
         <img class="profile-image" src="images/profilbild.jpeg" width="365px" height="436px" alt="a picture of Anton Schyberg">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
