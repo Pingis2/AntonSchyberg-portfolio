@@ -20,11 +20,17 @@ header {
 
 .icons-left {
     @include flexRow;
+    align-items: center;
     margin: 0 0 0 40px;
-    gap: 10px;
+    gap: 40px;
 
     .linkedin {
-        height: 50px;
+        height: auto;
+        width: 50px;
+    }
+
+    .discord {
+        height: auto;
         width: 50px;
     }
 }
@@ -32,7 +38,7 @@ header {
 .icons-right {
     @include flexRow;
     margin: 0 40px 0 0;
-    gap: 10px;
+    gap: 40px;
 
     .linkedin {
         height: 50px;
@@ -102,6 +108,23 @@ button {
     font-size: 4rem;
     margin-top: 300px;
     text-shadow: 2px 5px 20px black;
+}
+
+.intro-buttons {
+    @include flexRow;
+    justify-content: center;
+    gap: 50px;
+
+    button {
+        width: 200px;
+        height: 70px;
+        border: 1px solid white;
+        border-radius: 10px;
+        box-shadow: 0 6px 5px -5px black;
+        margin: 100px 0 0 0;
+        font-size: 1.2rem;
+        color: white;
+    }
 }
 
 
