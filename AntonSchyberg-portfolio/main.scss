@@ -1,3 +1,8 @@
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
 body {
     margin: 0;
     background: linear-gradient(180deg, #082752 0%, #446ff1 25%, #1fc8db 50%, #0d6ac1 75%), #000000 100%;
@@ -7,18 +12,44 @@ body {
     height: 100vh;
 }
 
+header {
+    @include flexRow;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons-left {
+    @include flexRow;
+    margin: 0 0 0 40px;
+    gap: 10px;
+
+    .linkedin {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+.icons-right {
+    @include flexRow;
+    margin: 0 40px 0 0;
+    gap: 10px;
+
+    .linkedin {
+        height: 50px;
+        width: 50px;
+    }
+}
+
 .nav {
-    height: 50px;
+    height: 70px;
     width: 900px;
-    margin: 0 auto 0 auto;
     border-radius: 0 0 10px 10px;
     background-color: #070F2B;
     border-bottom: 1px solid #535C91;
     border-left: 1px solid #535C91;
     border-right: 1px solid #535C91;
     text-align: center;
-    display: flex;
-    flex-direction: row;
+    @include flexRow;
     align-items: center;
     justify-content: center;
 }
@@ -70,6 +101,7 @@ button {
     color: white;
     font-size: 4rem;
     margin-top: 300px;
+    text-shadow: 2px 5px 20px black;
 }
 
 
@@ -247,8 +279,7 @@ button {
     display: flex;
 
     .flex {
-        display: flex;
-        flex-direction: row;
+        @include flexRow;
         margin: 0 auto 0 auto;
         gap: 100px;
 
