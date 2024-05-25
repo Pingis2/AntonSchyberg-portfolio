@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: linear-gradient(180deg, #082752 0%, #1fc8db 51%, #050a9d 75%);
+    background: linear-gradient(180deg, #082752 0%, #446ff1 25%, #1fc8db 50%, #0d6ac1 75%), #000000 100%;
 }
 
 .home-page {
@@ -31,16 +31,7 @@ button {
     cursor: pointer;
 }
 
-.nav-content {
-    font-size: 1.5rem;
-    color: #9290C3;
-    width: 200px;
-    height: 100%;
-
-    p {
-        height: auto;
-        margin: 0;
-    }
+.nav {
 
     .seperation-line {
         width: 1px;
@@ -49,10 +40,24 @@ button {
         margin: 0;
         padding: 0;
     }
+
+    .nav-content {
+        font-size: 1.5rem;
+        color: #9290C3;
+        width: 200px;
+        height: 100%;
+    
+        p {
+            height: auto;
+            margin: 0;
+        }
+    }
 }
+
 
 .nav-content :hover {
     background-color: green;
+    transition: .2s ease-in-out;
 }
 
 
@@ -238,7 +243,7 @@ button {
 }
 
 .about-me {
-    margin-top: 100px;
+    margin: 100px 0 100px 0;
     display: flex;
 
     .flex {
@@ -249,13 +254,14 @@ button {
 
         img {
             width: auto;
-            height: 500px;
+            height: 600px;
             border-radius: 50%;
+            box-shadow: -10px 10px 30px;
         }
     
         p {
-            width: 600px;
-            font-size: 2rem;
+            width: 800px;
+            font-size: 2.5rem;
             color: white;
         }
     }
