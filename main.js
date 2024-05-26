@@ -1,4 +1,4 @@
-import '../scss/main.scss';
+import './scss';
 
 const loaderContainer = document.getElementById('loader-container');
 const spinner = document.querySelector(".spinner")
