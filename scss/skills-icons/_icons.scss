@@ -1,0 +1,171 @@
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flexCol {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin mainFont {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@mixin marginCenter{
+    margin: 0 auto 0 auto;
+}
+
+.skills {
+    height: 100vh;
+    @include flexRow;
+    justify-content: space-evenly;
+
+    h2 {
+        margin: auto 0;
+        font-size: 4rem;
+    }
+}
+
+
+h4 {
+    color: white;
+    font-size: 2.5rem;
+    @include mainFont;
+    margin: 0 auto 50px auto;
+    width: 200px;
+    text-align: center;
+    height: 50px;
+}
+
+.front-end {
+    list-style: none;
+    color: black;
+    @include mainFont;
+    @include flexCol;
+    width: 400px;
+    margin: 150px 0 50px 0;
+    padding: 0;
+
+    .list {
+        @include flexRow;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        .html {
+            background-color: orange;
+            border: 2px solid rgb(255, 213, 150);
+        }
+
+        .typescript {
+            background-color: rgb(38, 157, 255);
+            border: 2px solid rgb(255, 213, 150);
+        }
+
+        .react {
+            background-color: rgb(145, 206, 255);
+            border: 2px solid rgb(255, 213, 150);
+        }
+
+        .css3 {
+            background-color: rgb(0, 95, 172);
+            border: 2px solid rgb(255, 213, 150);
+        }
+
+        .vite {
+            background-color: rgb(248, 255, 39);
+            border: 2px solid rgb(255, 213, 150);
+        }
+
+        .sass {
+            background-color: rgb(237, 138, 255);
+            border: 2px solid rgb(255, 213, 150);
+        }
+
+        .javascript {
+            background-color: rgb(252, 255, 103);
+            border: 2px solid rgb(255, 213, 150);
+        }
+
+        .node {
+            background-color: rgb(130, 255, 138);
+            border: 2px solid rgb(255, 213, 150);
+        }
+
+        .stack-icon{
+            width: auto;
+            height: 30px;
+            margin-left: 10px;
+        }
+    }
+
+    li {
+        border: 2px solid white;
+        width: 250px;
+        height: 70px;
+        font-size: 1.3rem;
+        @include flexRow;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.back-end {
+    list-style: none;
+    color: white;
+    @include mainFont;
+    @include flexCol;
+    width: 400px;
+    margin: 150px 0 50px 0;
+    padding: 0;
+
+    .list {
+        @include flexRow;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    li {
+        border: 2px solid white;
+        width: 250px;
+        height: 70px;
+        font-size: 1.3rem;
+        @include flexRow;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.other {
+    list-style: none;
+    color: white;
+    @include mainFont;
+    @include flexCol;
+    width: 400px;
+    margin: 150px 0 50px 0;
+    padding: 0;
+
+    .list {
+        @include flexRow;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        li {
+            border: 2px solid white;
+            width: 250px;
+            height: 70px;
+            font-size: 1.3rem;
+            @include flexRow;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    
+}

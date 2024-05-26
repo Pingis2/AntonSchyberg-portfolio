@@ -1,4 +1,5 @@
 @import './stars/stars';
+@import './skills-icons/icons';
 
 @mixin flexRow {
     display: flex;
@@ -397,8 +398,15 @@ h2 {
             }
         }
     }
-
 }
+
+/*-------------------------------my contacts------------------------------------*/
+
+.contacts {
+    height: 100vh;
+}
+
+
 
 
 
