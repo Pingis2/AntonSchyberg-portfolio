@@ -75,6 +75,8 @@ body {
     height: 100vh;
 }
 
+/*--------------------------------------nav menu---------------------------------------*/
+
 header {
     @include flexRow;
     align-items: center;
@@ -138,6 +140,11 @@ header {
     margin: 0 40px 0 0;
     gap: 40px;
 
+    .github {
+        height: auto;
+        width: 50px;
+    }
+
     .linkedin {
         height: 50px;
         width: 50px;
@@ -160,7 +167,7 @@ button {
     transition: .2s ease-in-out;
 }
 
-
+/*-------------------------------------intro page-------------------------------------*/
 
 .intro {
     @include mainFont;
@@ -217,10 +224,11 @@ button {
     transform: scale(1.03);
 }
 
-/* about me section */
+/*--------------------------------about me section------------------------------------------*/
 .about-me {
     margin: 100px 0 100px 0;
     display: flex;
+    height: 100vh;
 
     .flex {
         @include flexRow;
@@ -244,18 +252,19 @@ button {
     }
 }
 
-/*project section*/
+/*--------------------------------------project section-----------------------------------------------*/
 
 h2 {
     font-size: 3rem;
     @include mainFont;
     text-align: center;
-    margin: 0;
+    margin: 0 0 40px 0;
     color: white
 }
 
 .my-projects {
     @include flexRow;
+    height: 100vh;
     
     .my-latest-project {
         width: 1300px;
@@ -270,39 +279,63 @@ h2 {
             font-size: 2rem;
             @include mainFont;
             text-align: center;
-            color: white;
+            color: black;
+            background-color: beige;
+            border: 2px solid black;
+            margin: 20px auto 20px auto;
+            width: 300px;
+
         }
     
         .image-and-buttons{
             @include flexRow;   
-            justify-content: center;
+            width: 1200px;
+            margin-left: 50px;
     
             img {
                 width: auto;
-                height: 500px;
-                margin-right: 100px;
+                height: 550px;
+                margin-right: 80px;
+                border: 3px solid black;
             }
 
             .project-buttons {
                 @include flexCol;
                 gap: 50px;
                 margin-top: 120px;
+
+                a {
+                    width: auto;
+                    text-decoration: none;
+                }
                 
                 button {
                     font-size: 1.2rem;
                     border: 1px solid white;
                     border-radius: 10px;
-                    width: 200px;
+                    width: 250px;
                     height: 100px;
                     color: white;
                     transition: 0.3s ease-in-out;
                     transform: scale(1);
+                    @include flexRow;
+                    align-items: center;
+                    justify-content: center;
+
+                    .github-on-button {
+                        width: auto;
+                        height: 30px;
+                        border: none;
+                        margin: 0 0 0 10px;
+                    }
                 }
 
                 .button-project:hover {
                     background-color: green;
                     transform: scale(1.03);
                 }
+
+                
             }
         } 
 
@@ -310,6 +343,10 @@ h2 {
             width: auto;
             height: auto;
             margin: 30px 20px 0 50px;
+            background-color: beige;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
 
             .desc-text {
                 margin: 0;
@@ -317,7 +354,7 @@ h2 {
                 font-size: 1.5rem;
                 @include mainFont;
                 text-align: left;
-                color: white;
+                color: black;
             }
         }
     }
@@ -325,12 +362,12 @@ h2 {
     .my-other-projects {
         display: flex;
         flex-direction: column;
-        margin: 0 200px 0 0;
+        margin: 0 100px 30px 0;
         gap: 20px;
         width: auto;
-        height: auto;
+        height: 1150px;
         background-color: rgb(136, 136, 255);
-        padding: 0 20px;
+        padding: 0 20px 20px 20px;
         border-radius: 10px;
         border: rgb(126, 255, 126) 2px solid;
 
@@ -338,12 +375,16 @@ h2 {
             font-size: 2rem;
             @include mainFont;
             text-align: center;
-            color: white;
+            margin: 20px auto 0 auto;
+            color: black;
+            width: 300px;
+            border: 2px solid black;
+            background-color: beige;
         }
     
         .small-project {
-            height: 300px;
-            width: 500px;
+            height: 250px;
+            width: 450px;
             overflow: hidden;
             display: flex;
             justify-content: center;
@@ -352,7 +393,7 @@ h2 {
 
             img {
                 width: auto;
-                height: 300px;
+                height: 270px;
             }
         }
     }
