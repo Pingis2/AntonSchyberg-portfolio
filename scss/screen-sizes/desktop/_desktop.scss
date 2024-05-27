@@ -1,27 +1,6 @@
 @import './scss/stars/stars';
 @import './scss/skills-icons/icons';
-
-@mixin flexRow {
-    display: flex;
-    flex-direction: row;
-}
-
-@mixin flexCol {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin mainFont {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-@mixin marginCenter{
-    margin: 0 auto 0 auto;
-}
-
-@mixin upperCase {
-    text-transform: uppercase;
-}
+@import './scss/mixins/mixins';
 
 .hidden {
     display: none;
@@ -77,7 +56,7 @@ body {
     }
 }
 
-.home-page {
+.top {
     height: 100vh;
 }
 
@@ -112,7 +91,7 @@ header {
         }
     
         .nav-content {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #9290C3;
             width: 200px;
             height: 100%;
@@ -120,6 +99,7 @@ header {
             p {
                 height: auto;
                 margin: 0;
+                @include upperCase;
             }
         }
     }
@@ -145,14 +125,15 @@ header {
 
 .icons-right {
     @include flexCol;
-    margin: 0 40px 0 0;
+    margin: 0 40px 0 70px;
     gap: 10px;
+    width: auto;
     cursor: pointer;
 
     span {
         width: 50px;
         height: 6px;
-        background-color: white;
+        @include lightPurpleBackground;
     }
 
     .github {
@@ -185,7 +166,7 @@ button {
 /*-------------------------------------intro page-------------------------------------*/
 
 .sidebar {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     position: fixed;
     top: 40%;
     opacity: 0;
@@ -256,7 +237,7 @@ button {
 
     button {
         @include mainFont;
-        width: 200px;
+        width: 220px;
         height: 70px;
         border: 1px solid white;
         border-radius: 10px;
@@ -270,75 +251,58 @@ button {
 }
 
 .intro-buttons .about-me-button:hover {
-    background-color: green;
+    background-color: #070F2B;
+    color: #00ff1a;
     transform: scale(1.03);
 }
 
 .intro-buttons .some-other-button:hover {
-    background-color: green;
+    background-color: #070F2B;
+    color: #fff700;
     transform: scale(1.03);
 }
 
 /*--------------------------------about me section------------------------------------------*/
-/*
+
 .about-me {
-    margin: 100px 0 100px 0;
-    display: flex;
-    height: 100vh;
+    padding-top: 100px;
 
     .flex {
-        //@include flexRow;
-        //margin: 0 auto 0 auto;
-        gap: 100px;
-        float: left;
-
-        img {
-            width: auto;
-            height: 600px;
+        height: 1100px;
+        width: 1200px;
+        margin: 0 auto 0 auto;
+    
+        .profile-image {
+            width: 500px;
+            height: auto;
             border-radius: 50%;
             box-shadow: -10px 10px 30px;
+            float: left;
+            position: relative;
+            margin: 0 50px 30px 0;
         }
     
-        p {
-            margin: 0;
-            width: 800px;
-            font-size: 2.5rem;
-            color: white;
+        .text {
             @include mainFont;
-            float: right;
+            width: 1200px;
+    
+            h3 {
+                font-size: 2.2rem;
+                margin: 0;
+                color: white;
+            }
+        
+            p {
+                margin: 0;
+                font-size: 2rem;
+                color: white;
+                position: relative;
+            }
         }
     }
 }
-*/
 
-.about-me {
-    height: 100vh;
-}
 
-.flex {
-    height: 1100px;
-    width: 1000px;
-    margin: 0 auto 0 auto;
-
-    .profile-image {
-        width: 500px;
-        height: auto;
-        border-radius: 50%;
-        box-shadow: -10px 10px 30px;
-        float: left;
-        position: relative;
-        margin: 0 50px 50px 0;
-    }
-
-    p {
-        margin: 0;
-        font-size: 2rem;
-        color: white;
-        @include mainFont;
-        width: 1000px;
-        position: relative;
-    }
-}
 
 
 
@@ -356,7 +320,6 @@ h2 {
 
 .my-projects {
     @include flexRow;
-    height: 100vh;
     @include marginCenter;
     
     .my-latest-project {
@@ -443,7 +406,8 @@ h2 {
             }
 
             .button-project:hover {
-                background-color: green;
+                background-color: #070F2B;
+                color: #fff700;
                 transform: scale(1.03);
             }
 
@@ -494,7 +458,7 @@ h2 {
 /*-------------------------------my contacts------------------------------------*/
 
 .contacts {
-    height: 60vh;
+    //height: 60vh;
     @include mainFont;
 
     h3 {
@@ -557,7 +521,7 @@ footer {
         gap: 40px;
 
         a {
-            color: rgb(118, 118, 118);
+            color: #535C91;
             text-decoration: none;
         }
 
@@ -580,7 +544,7 @@ footer {
             height: auto;
             width: 30px;
             //stroke: white;
-            fill: #767676;
+            fill: #535C91;
         }
     }
 
@@ -589,6 +553,13 @@ footer {
 }
 
 .fading-line-horizontal {
+    margin: 100px auto 100px auto;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(118, 118, 118, 0), rgb(118, 118, 118) 20%, rgb(118, 118, 118) 80%, rgba(118, 118, 118, 0));
+}
+
+.fading-line-horizontal-footer {
     @include marginCenter;
     width: 80%;
     height: 1px;
@@ -598,5 +569,6 @@ footer {
 .fading-line-vertical {
     width: 1px;
     height: 300px;
+    margin-bottom: 40px;
     background: linear-gradient(to bottom, rgba(118, 118, 118, 0), rgb(118, 118, 118) 20%, rgb(118, 118, 118) 80%, rgba(118, 118, 118, 0));
 }
