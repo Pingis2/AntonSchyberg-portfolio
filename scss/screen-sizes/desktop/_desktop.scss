@@ -177,6 +177,39 @@ button {
 
 /*-------------------------------------intro page-------------------------------------*/
 
+.sidebar {
+    color: white;
+    font-size: 1.3rem;
+    position: fixed;
+    //display: none;
+    top: 40%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    
+    ul {
+        @include flexCol;
+        gap: 20px;
+
+        li {
+            transition: 0.3s ease-in-out;
+            transform: scale(1);
+            cursor: pointer;
+        }
+
+        li:hover {
+            transform: scale(1.03);
+        }
+    }
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
+
+
+
+
 .intro {
     @include mainFont;
     text-align: center;
@@ -233,15 +266,17 @@ button {
 }
 
 /*--------------------------------about me section------------------------------------------*/
+/*
 .about-me {
     margin: 100px 0 100px 0;
     display: flex;
     height: 100vh;
 
     .flex {
-        @include flexRow;
-        margin: 0 auto 0 auto;
+        //@include flexRow;
+        //margin: 0 auto 0 auto;
         gap: 100px;
+        float: left;
 
         img {
             width: auto;
@@ -256,9 +291,44 @@ button {
             font-size: 2.5rem;
             color: white;
             @include mainFont;
+            float: right;
         }
     }
 }
+*/
+
+.about-me {
+    height: 100vh;
+}
+
+.flex {
+    height: 1100px;
+    width: 1000px;
+    margin: 0 auto 0 auto;
+
+    .profile-image {
+        width: 500px;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: -10px 10px 30px;
+        float: left;
+        position: relative;
+        margin: 0 50px 50px 0;
+    }
+
+    p {
+        margin: 0;
+        font-size: 2rem;
+        color: white;
+        @include mainFont;
+        width: 1000px;
+        position: relative;
+    }
+}
+
+
+
+
 
 /*--------------------------------------project section-----------------------------------------------*/
 
@@ -273,6 +343,7 @@ h2 {
 .my-projects {
     @include flexRow;
     height: 100vh;
+    @include marginCenter;
     
     .my-latest-project {
         width: 900px;
@@ -296,7 +367,7 @@ h2 {
         }
     
         .image{
-            width: 1000px;
+            width: 800px;
             margin-left: 50px;
     
             img {
@@ -399,8 +470,8 @@ h2 {
             border-radius: 10px;
 
             img {
-                width: auto;
-                height: 270px;
+                width: 500px;
+                height: auto;
             }
         }
     }
