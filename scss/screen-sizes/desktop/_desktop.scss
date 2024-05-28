@@ -1,6 +1,7 @@
 @import './scss/stars/stars';
 @import './scss/skills-icons/icons';
 @import './scss/mixins/mixins';
+@import './scss/other-projects/other-projects';
 
 .hidden {
     display: none;
@@ -54,10 +55,6 @@ body {
     100% {
         transform: rotate(360deg);
     }
-}
-
-.top {
-    height: 100vh;
 }
 
 /*--------------------------------------nav menu---------------------------------------*/
@@ -186,6 +183,10 @@ button {
 
 
 /*-------------------------------------intro page-------------------------------------*/
+.intro {
+    height: 1000px;
+}
+
 
 .sidebar {
     font-size: 1.4rem;

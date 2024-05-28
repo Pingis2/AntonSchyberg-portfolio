@@ -1,3 +1,7 @@
+import { printProject } from './other-projects/coloringGame.js';
+import './other-projects/documentCreator.js';
+import './other-projects/swedishQuiz.js';
+import './other-projects/webshop.js';
 import './scss/main.scss';
 
 const loaderContainer = document.getElementById('loader-container');
@@ -56,3 +60,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', checkScroll);
 });
+
+printProject();
