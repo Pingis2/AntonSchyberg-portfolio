@@ -43,12 +43,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const documentHeight = document.documentElement.scrollHeight;
         const scrollPercentage = (scrollPosition / documentHeight) * 100;
 
-        if (scrollPercentage >= 30) {
+        if (scrollPercentage >= 25) {
             sidebar.style.opacity = 1;
-        } else if (scrollPercentage >= 25) { 
-            sidebar.style.opacity = (scrollPercentage -25) / 10;
+        } else if (scrollPercentage >= 20) { 
+            sidebar.style.opacity = (scrollPercentage -20) / 10;
+            sidebar.classList.remove('hidden');
         } else {
             sidebar.style.opacity = 0;
+            sidebar.classList.add('hidden');
         }
     }
 

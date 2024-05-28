@@ -27,6 +27,12 @@ h4 {
     height: 50px;
 }
 
+.stack-icon{
+    width: auto;
+    height: 30px;
+    margin-left: 10px;
+}
+
 .front-end {
     list-style: none;
     color: black;
@@ -82,12 +88,6 @@ h4 {
             background-color: rgb(130, 255, 138);
             border: 2px solid rgb(255, 213, 150);
         }
-
-        .stack-icon{
-            width: auto;
-            height: 30px;
-            margin-left: 10px;
-        }
     }
 
     li {
@@ -103,35 +103,7 @@ h4 {
 
 .back-end {
     list-style: none;
-    color: white;
-    @include mainFont;
-    @include flexCol;
-    width: 400px;
-    margin: 150px 0 50px 0;
-    padding: 0;
-
-    .list {
-        @include flexRow;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-    }
-
-    li {
-        border: 2px solid white;
-        width: 250px;
-        height: 70px;
-        font-size: 1.3rem;
-        @include flexRow;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-.other {
-    list-style: none;
-    color: white;
+    color: black;
     @include mainFont;
     @include flexCol;
     width: 400px;
@@ -153,6 +125,86 @@ h4 {
             @include flexRow;
             justify-content: center;
             align-items: center;
+        }
+
+        .express {
+            background-color: rgb(255, 255, 255);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .digitalOcean {
+            background-color: rgb(64, 0, 255);
+            border: 2px solid rgb(255, 255, 255);
+        }
+
+        .mySql {
+            background-color: rgb(255, 255, 255);
+            border: 2px solid rgb(0, 21, 255);
+        }
+
+        .mongoDB {
+            background-color: rgb(115, 255, 39);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .postman {
+            background-color: rgb(255, 89, 0);
+            border: 2px solid rgb(238, 255, 0);
+        }
+
+        .java {
+            background-color: rgb(0, 187, 255);
+            border: 2px solid rgb(255, 153, 0);
+        }
+    }
+
+   
+}
+
+.other {
+    list-style: none;
+    color: black;
+    @include mainFont;
+    @include flexCol;
+    width: 400px;
+    margin: 150px 0 50px 0;
+    padding: 0;
+
+    .list {
+        @include flexRow;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        li {
+            border: 2px solid white;
+            width: 250px;
+            height: 70px;
+            font-size: 1.3rem;
+            @include flexRow;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .illustrator {
+            background-color: rgb(255, 89, 0);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .photoshop {
+            background-color: rgb(0, 187, 255);
+            border: 2px solid rgb(0, 33, 100);
+        }
+
+        .figma {
+            background-color: rgb(255, 70, 70);
+            border: 2px solid rgb(145, 255, 0);
+        }
+
+        .fl-studio {
+            background-color: rgb(255, 157, 0);
+            border: 2px solid rgb(106, 255, 0);
         }
     }
 
