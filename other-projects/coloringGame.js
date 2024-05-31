@@ -3,7 +3,7 @@ const main = document.getElementById('main');
 const hiddenProjects = document.getElementById('hiddenProjects');
 const sideBar = document.getElementById('sidebar');
 
-export function printProject() {
+export function printGridpainter() {
     projectDiv.addEventListener('click', () => {
         main.classList.add('hidden');
         sideBar.classList.add('hidden');
@@ -16,6 +16,6 @@ export function printProject() {
     })
 }
 
-printProject();
+printGridpainter();
 
 

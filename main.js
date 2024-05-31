@@ -1,4 +1,4 @@
-import { printProject } from './other-projects/coloringGame.js';
+import { printGridpainter } from './other-projects/coloringGame.js';
 import './other-projects/documentCreator.js';
 import './other-projects/swedishQuiz.js';
 import './other-projects/webshop.js';
@@ -61,4 +61,4 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', checkScroll);
 });
 
-printProject();
+printGridpainter();
