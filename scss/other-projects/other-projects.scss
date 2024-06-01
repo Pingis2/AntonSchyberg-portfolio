@@ -1,80 +1,115 @@
 @import '/scss/mixins/mixins';
 
-main {
+.coloringGameDisplay {
     @include flexCol;
-}
 
-h1 {
-    font-size: 4rem;
-    margin: 50px 0 50px 0;
-    color: white;
-    @include mainFont;
-    text-align: center;
-}
-
-.image {
-    width: 1000px;
-    @include marginCenter;
-
-    img {
-        width: 1000px;
+    a{
         height: auto;
-        @include marginCenter;
-    }
-}
-
-
-.textDiv {
-    width: 1000px;
-    height: auto;
-    text-align: start;
-    @include marginCenter;
-
-    p {
-        color: white;
-        @include mainFont;
-        font-size: 1.5rem;
-    }
-}
-
-.project-buttons {
-    @include flexRow;
-    gap: 30px;
-    margin: 20px auto 50px auto;
-    justify-content: flex-start;
-    width: 530px;
-
-    a {
-        width: auto;
+        width: 120px;
+        padding: 10px;
+        margin: 30px 0 0 30px;
         text-decoration: none;
     }
-    
-    button {
-        font-size: 1.2rem;
-        border: 1px solid white;
-        border-radius: 10px;
-        width: 250px;
-        height: 70px;
-        color: white;
-        transition: 0.3s ease-in-out;
-        transform: scale(1);
-        @include flexRow;
-        align-items: center;
-        justify-content: center;
 
-        .github-on-button {
+    .image {
+        width: 1000px;
+        @include marginCenter;
+    
+        img {
+            width: 1000px;
+            height: auto;
+            @include marginCenter;
+        }
+    }
+    
+    
+    .textDiv {
+        width: 1000px;
+        height: auto;
+        text-align: start;
+        @include marginCenter;
+    
+        p {
+            color: white;
+            @include mainFont;
+            font-size: 1.5rem;
+        }
+    }
+    
+    .project-buttons {
+        @include flexRow;
+        gap: 30px;
+        justify-content: center;
+        width: auto;
+    
+        a {
             width: auto;
-            height: 30px;
-            border: none;
-            margin: 0 0 0 10px;
+            text-decoration: none;
+            margin: 0 0 30px 0;
+        }
+        
+        button {
+            font-size: 1.2rem;
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 250px;
+            height: 70px;
+            color: white;
+            transition: 0.3s ease-in-out;
+            transform: scale(1);
+            @include flexRow;
+            align-items: center;
+            justify-content: center;
+    
+            .github-on-button {
+                width: auto;
+                height: 30px;
+                border: none;
+                margin: 0 0 0 10px;
+            }
+        }
+    
+        .button-project:hover {
+            background-color: #070F2B;
+            color: #fff700;
+            transform: scale(1.03);
+        }
+    
+        
+    }
+    
+    
+    h1 {
+        font-size: 4rem;
+        margin: 0 auto 50px auto;
+        color: white;
+        @include mainFont;
+        text-align: center;
+    }
+    
+    
+    
+    .backButton {
+        font-size: 2rem;
+        color: white;
+        padding: 0;
+        @include flexRow;
+
+        .arrow {
+            width: 37px;
+            margin-right: 5px;
+            height: auto;
+        }
+    
+        p {
+            margin: 0;
+            
         }
     }
 
-    .button-project:hover {
-        background-color: #070F2B;
-        color: #fff700;
-        transform: scale(1.03);
-    }
-
-    
 }
+
+
+
+
+

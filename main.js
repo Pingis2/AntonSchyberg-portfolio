@@ -7,15 +7,20 @@ import './scss/main.scss';
 const loaderContainer = document.getElementById('loader-container');
 const spinner = document.querySelector(".spinner")
 
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        //spinner.classList.add("hidden");
+export function loaderContainerFunction() {
+    window.addEventListener('load', () => {
         setTimeout(() => {
-            loaderContainer.style.animation = "shrink-container 1s linear forwards";
-        }, 800);
-    }, 200);
-    
-});
+            //spinner.classList.add("hidden");
+            setTimeout(() => {
+                loaderContainer.style.animation = "shrink-container 1s linear forwards";
+            }, 800);
+        }, 200);
+        
+    });
+}
+
+loaderContainerFunction();
+
 //animates in and out
 /*
 document.addEventListener('DOMContentLoaded', function () {
@@ -60,5 +65,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', checkScroll);
 });
-
-printGridpainter();
