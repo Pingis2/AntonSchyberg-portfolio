@@ -13,6 +13,9 @@ const hiddenProjects = document.getElementById('hiddenProjects');
 const swedishQuizGame = document.getElementById('swedishQuizGame');
 const documentCreator = document.getElementById('docCreator');
 const donutWebshop = document.getElementById('donutWebshop');
+const infoIcon = document.getElementById('infoIcon');
+const infoBox = document.getElementById('infoBox');
+const infoBoxClose = document.getElementById('infoBoxClose');
 
 export function loaderContainerFunction() {
     window.addEventListener('load', () => {
@@ -123,3 +126,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', checkScroll);
 });
+
+infoIcon.addEventListener('click', () => {
+    infoBox.classList.remove('hidden');
+})
+
+infoBoxClose.addEventListener('click', () => {
+    infoBox.classList.add('hidden');
+})
