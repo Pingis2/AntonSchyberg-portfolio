@@ -70,7 +70,7 @@ a {
             margin: 0 0 30px 0;
         }
         
-        button {
+        .button-project {
             font-size: 1.2rem;
             border: 1px solid white;
             border-radius: 10px;
@@ -96,11 +96,34 @@ a {
             color: #fff700;
             transform: scale(1.03);
         }
-    
+
+        .button-project-not-available {
+            font-size: 1.2rem;
+            border: 1px solid white;
+            border-radius: 10px;
+            width: auto;
+            height: 70px;
+            color: white;
+            transition: 0.3s ease-in-out;
+            transform: scale(1);
+            @include flexRow;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            cursor: default;
+            padding: 0 15px 0 15px;
+                    
+            .button-project-not-available:hover {
+                background-color: #070F2B;
+                color: #fff700;
+                transform: scale(1.03);
+            }
         
+            
+        }
     }
-    
-    
+
+        
     h1 {
         font-size: 4rem;
         margin: 0 auto 50px auto;
@@ -108,6 +131,10 @@ a {
         @include mainFont;
         text-align: center;
     }
+
+    
+    
+    
 
 }
 
