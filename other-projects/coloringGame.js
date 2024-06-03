@@ -6,6 +6,7 @@ const gridpainter = document.getElementById('Gridpainter');
 
 export function printGridpainter() {
     projectDiv.addEventListener('click', () => {
+        window.scrollTo(0, 0);
         main.classList.add('hidden');
         sideBar.classList.add('hidden');
 
@@ -13,13 +14,9 @@ export function printGridpainter() {
         gridpainter.classList.remove('hidden');    
         
         localStorage.setItem('visibilityState', 'gridpainter');
+
+        
     })
 }
 
 printGridpainter();
-
-
-
-
-
-

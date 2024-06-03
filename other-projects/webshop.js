@@ -6,6 +6,7 @@ const donutWebshop = document.getElementById('donutWebshop');
 
 export function printDonutWebshop() {
     projectDiv.addEventListener('click', () => {
+        window.scrollTo(0, 0);
         main.classList.add('hidden');
         sideBar.classList.add('hidden');
 

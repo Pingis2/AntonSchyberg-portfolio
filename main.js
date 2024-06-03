@@ -39,6 +39,7 @@ function applyVisibilityState() {
     documentCreator.classList.add('hidden');
     donutWebshop.classList.add('hidden');
     
+    
     if (visibilityState) {
         hiddenProjects.classList.remove('hidden');
 
@@ -68,7 +69,6 @@ function applyVisibilityState() {
 document.addEventListener('DOMContentLoaded', applyVisibilityState);
 
 backButton.addEventListener('click', () => {
-    console.log('click');
     localStorage.removeItem('visibilityState');
     main.classList.remove('hidden');
     sideBar.classList.add('hidden');

@@ -6,6 +6,7 @@ const swedishQuizGame = document.getElementById('swedishQuizGame');
 
 export function printSwedishQuiz() {
     projectDiv.addEventListener('click', () => {
+        window.scrollTo(0, 0);
         main.classList.add('hidden');
         sideBar.classList.add('hidden');
 

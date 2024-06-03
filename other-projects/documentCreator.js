@@ -6,6 +6,7 @@ const documentCreator = document.getElementById('docCreator');
 
 export function printDocumentCreator() {
     projectDiv.addEventListener('click', () => {
+        window.scrollTo(0, 0);
         main.classList.add('hidden');
         sideBar.classList.add('hidden');
 
