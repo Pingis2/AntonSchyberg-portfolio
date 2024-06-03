@@ -1,6 +1,29 @@
 @import '/scss/mixins/mixins';
 
-.coloringGameDisplay {
+a {
+    text-decoration: none;
+
+    .backButton {
+        font-size: 2rem;
+        color: white;
+        padding: 0;
+        @include flexRow;
+        margin: 30px 0 0 30px;
+    
+        .arrow {
+            width: 37px;
+            margin-right: 5px;
+            height: auto;
+        }
+    
+        p {
+            margin: 0;
+        }
+    }
+}
+
+
+.gameDisplay {
     @include flexCol;
 
     a{
@@ -8,7 +31,6 @@
         width: 120px;
         padding: 10px;
         margin: 30px 0 0 30px;
-        text-decoration: none;
     }
 
     .image {
@@ -85,26 +107,6 @@
         color: white;
         @include mainFont;
         text-align: center;
-    }
-    
-    
-    
-    .backButton {
-        font-size: 2rem;
-        color: white;
-        padding: 0;
-        @include flexRow;
-
-        .arrow {
-            width: 37px;
-            margin-right: 5px;
-            height: auto;
-        }
-    
-        p {
-            margin: 0;
-            
-        }
     }
 
 }

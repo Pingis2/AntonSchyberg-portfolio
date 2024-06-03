@@ -1,16 +1,22 @@
-import { printGridpainter } from './other-projects/coloringGame.js';
+import './other-projects/coloringGame.js';
 import './other-projects/documentCreator.js';
 import './other-projects/swedishQuiz.js';
 import './other-projects/webshop.js';
 import './scss/main.scss';
 
 const loaderContainer = document.getElementById('loader-container');
-const spinner = document.querySelector(".spinner")
+const backButton = document.getElementById('backButton');
+const sideBar = document.getElementById('sidebar');
+const gridpainter = document.getElementById('Gridpainter');
+const main = document.getElementById('main');
+const hiddenProjects = document.getElementById('hiddenProjects');
+const swedishQuizGame = document.getElementById('swedishQuizGame');
+const documentCreator = document.getElementById('docCreator');
+const donutWebshop = document.getElementById('donutWebshop');
 
 export function loaderContainerFunction() {
     window.addEventListener('load', () => {
         setTimeout(() => {
-            //spinner.classList.add("hidden");
             setTimeout(() => {
                 loaderContainer.style.animation = "shrink-container 1s linear forwards";
             }, 800);
@@ -18,6 +24,58 @@ export function loaderContainerFunction() {
         
     });
 }
+
+function applyVisibilityState() {
+    const visibilityState = localStorage.getItem('visibilityState');
+
+    main.classList.add('hidden');
+    sideBar.classList.add('hidden');
+    hiddenProjects.classList.add('hidden');
+    gridpainter.classList.add('hidden');
+    swedishQuizGame.classList.add('hidden');
+    documentCreator.classList.add('hidden');
+    donutWebshop.classList.add('hidden');
+    
+    if (visibilityState) {
+        hiddenProjects.classList.remove('hidden');
+
+        if (visibilityState === 'gridpainter') {
+            gridpainter.classList.remove('hidden');
+        } 
+        else if (visibilityState === 'swedishquizgame') {
+            swedishQuizGame.classList.remove('hidden');
+        } 
+        else if (visibilityState === 'documentCreator') {
+            documentCreator.classList.remove('hidden');
+        } 
+        else if (visibilityState === 'donutWebshop') {
+            donutWebshop.classList.remove('hidden');
+        } 
+        else {
+            main.classList.remove('hidden');
+            sideBar.classList.remove('hidden');
+        }
+            
+    } else {
+        main.classList.remove('hidden');
+        sideBar.classList.remove('hidden');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', applyVisibilityState);
+
+backButton.addEventListener('click', () => {
+    console.log('click');
+    localStorage.removeItem('visibilityState');
+    main.classList.remove('hidden');
+    sideBar.classList.add('hidden');
+    hiddenProjects.classList.add('hidden');
+    gridpainter.classList.add('hidden');
+    swedishQuizGame.classList.add('hidden');
+    documentCreator.classList.add('hidden');
+    donutWebshop.classList.add('hidden');
+})
+
 
 loaderContainerFunction();
 
