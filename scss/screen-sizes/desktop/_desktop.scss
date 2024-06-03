@@ -141,33 +141,25 @@ header {
 
 .icons-right {
 
-    .burger {
-        @include flexCol;
-        margin: 0 40px 0 70px;
-        gap: 10px;
+    .info {
+        margin: 0 30px 0 80px;
+        height: 50px;
         width: auto;
-        cursor: pointer;        
-
-        span {
+        cursor: pointer;   
+        
+        .info-icon {
+            height: auto;
             width: 50px;
-            height: 6px;
-            @include lightPurpleBackground;
-            transition: .2s ease;
+        }
+
+        .info-icon path {
+            fill: #535C91;
+            transition: .2s ease-in-out;
         }
     }
 
-    .burger:hover span {
-        background-color: white;
-    }
-
-    .github {
-        height: auto;
-        width: 50px;
-    }
-
-    .linkedin {
-        height: 50px;
-        width: 50px;
+    .info:hover .info-icon path{
+        fill: white;
     }
 }
 
