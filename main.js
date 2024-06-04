@@ -64,9 +64,19 @@ function applyVisibilityState() {
         main.classList.remove('hidden');
         sideBar.classList.remove('hidden');
     }
+
+    const scrollPosition = localStorage.getItem('scrollPosition');
+    if (scrollPosition) {
+        window.scrollTo(0, parseInt(scrollPosition, 10));
+        localStorage.removeItem('scrollPosition');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', applyVisibilityState);
+
+function saveScrollPosition() {
+    localStorage.setItem('scrollPosition', window.scrollY);
+}
 
 backButton.addEventListener('click', () => {
     localStorage.removeItem('visibilityState');
@@ -77,34 +87,22 @@ backButton.addEventListener('click', () => {
     swedishQuizGame.classList.add('hidden');
     documentCreator.classList.add('hidden');
     donutWebshop.classList.add('hidden');
+
+    // Restore the scroll position
+    //const scrollPosition = localStorage.getItem('scrollPosition');
+    //if (scrollPosition) {
+    //    window.scrollTo(0, parseInt(scrollPosition, 10));
+    //    localStorage.removeItem('scrollPosition');
+    //}
 })
+
+document.querySelectorAll('.my-other-projects').forEach(link => {
+    link.addEventListener('click', saveScrollPosition);
+});
 
 
 loaderContainerFunction();
 
-//animates in and out
-/*
-document.addEventListener('DOMContentLoaded', function () {
-    const sidebar = document.getElementById('sidebar');
-
-    function checkScroll() {
-        const scrollPosition = window.scrollY + window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        const scrollPercentage = (scrollPosition / documentHeight) * 100;
-
-        if (scrollPercentage >= 20 && scrollPercentage <= 80) {
-            sidebar.classList.add('visible');
-        } else {
-            sidebar.classList.remove('visible');
-        }
-    }
-
-    window.addEventListener('scroll', checkScroll);
-});
-*/
-
-
-//fades in out and out
 document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.getElementById('sidebar');
 
