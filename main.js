@@ -132,3 +132,21 @@ infoIcon.addEventListener('click', () => {
 infoBoxClose.addEventListener('click', () => {
     infoBox.classList.add('hidden');
 })
+
+function alertClosed () {
+    const alert = document.getElementById('alert');
+
+    if (alert) {
+        alert.addEventListener('click', () => {
+            alert.classList.add('hidden');
+            sessionStorage.setItem('alert closed', true);
+        })
+
+        if (sessionStorage.getItem('alert closed') === 'true') {
+            alert.classList.add('hidden');
+        }
+    } 
+    
+}
+
+alertClosed();
