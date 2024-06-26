@@ -431,6 +431,13 @@ h2 {
 
         .project-buttons {
             @include flexRow;
+
+            @supports not (gap: 30px) {
+                > *:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+
             gap: 30px;
             margin: 20px auto 0 auto;
             justify-content: flex-start;
