@@ -577,6 +577,12 @@ h2 {
     .headers {
         @include flexRow;
         justify-content: center;
+
+        @supports not (gap: 100px) {
+            > *:not(:last-child) {
+                margin-right: 100px;
+            }
+        }
         gap: 100px;
 
         h5 {
