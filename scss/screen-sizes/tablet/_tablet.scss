@@ -593,6 +593,12 @@ h2 {
 
         .name-and-link {
             @include flexRow;
+
+            @supports not (gap: 20px) {
+                > *:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
             gap: 20px;
 
             p {
@@ -623,6 +629,12 @@ footer {
     .footer-list {
         display: flex;
         justify-content: center;
+
+        @supports not (gap: 40px) {
+            > *:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
         gap: 40px;
 
         a {
