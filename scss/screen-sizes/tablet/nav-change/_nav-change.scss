@@ -1,0 +1,168 @@
+.hidden {
+    display: none;
+}
+
+header {
+    @include flexRow;
+    align-items: center;
+    justify-content: space-between;
+    @include mainFont;
+
+    .nav {
+        height: 70px;
+        width: 744px;
+        border-radius: 0 0 10px 10px;
+        background-color: #070F2B;
+        border-bottom: 1px solid #535C91;
+        border-left: 1px solid #535C91;
+        border-right: 1px solid #535C91;
+        text-align: center;
+        @include flexRow;
+        margin: 0 auto 0 auto;
+        align-items: center;
+        justify-content: center;
+    
+        .seperation-line {
+            width: 1px;
+            height: 20px;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .nav-content {
+            font-size: 1.2rem;
+            color: #9290C3;
+            width: 180px;
+            height: auto;
+        
+            p {
+                height: auto;
+                margin: 0;
+                @include upperCase;
+            }
+        }
+
+        .nav-content :hover {
+            color: white;
+            transition: .2s ease-in-out;
+        }
+    }
+}
+
+
+
+.icons-left {
+    @include flexRow;
+    align-items: center;
+    margin: 0 0 0 30px;
+    gap: 20px;
+    display: none;
+
+    .linkedin {
+        height: auto;
+        width: 30px;
+        fill: #535C91;
+        transition: .2s ease;
+    }
+
+    .linkedin:hover {
+        fill: white;
+    }
+
+    .github {
+        height: auto;
+        width: 30px;
+
+        path {
+            fill: #535C91;
+            transition: .2s ease;
+        }
+    }
+
+    .github-link:hover .github path {
+        fill: white;
+    }
+}
+
+.icons-right {
+    display: none;
+
+    .info {
+        margin: 0 30px 0 0;
+        height: 50px;
+        width: auto;
+        cursor: pointer;
+        
+        .info-icon {
+            height: auto;
+            width: 35px;
+        }
+
+        .info-icon path {
+            fill: #535C91;
+            transition: .2s ease-in-out;
+        }
+    }
+
+    .info:hover .info-icon path{
+        fill: white;
+    }
+}
+
+.info-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin: 20px 20px 0 0;
+
+    .info-box-close {
+        text-align: left;
+    }
+
+    p {
+        @include mainFont;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .info-box-button {
+        width: auto;
+        height: auto;
+        border: black 1px solid;
+        @include flexRow;
+        align-items: center;
+        @include marginCenter;
+
+        .github-on-button {
+            width: auto;
+            height: 30px;
+            border: none;
+            margin: 0 0 0 10px;
+        }
+    }
+}
+
+.burger-menu {
+    display: block;
+    margin: 0 30px 0 0;
+
+    .burger {
+        @include flexCol;
+        gap: 10px;
+        
+        span {
+            width: 40px;
+            height: 2px;
+            background-color: white;
+        }
+        
+    }
+}
