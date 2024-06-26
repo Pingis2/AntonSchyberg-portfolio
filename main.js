@@ -2,6 +2,7 @@ import './other-projects/coloringGame.js';
 import './other-projects/documentCreator.js';
 import './other-projects/swedishQuiz.js';
 import './other-projects/webshop.js';
+import './other-projects/surfClub.js';
 import './scss/main.scss';
 
 const loaderContainer = document.getElementById('loader-container');
@@ -13,6 +14,7 @@ const hiddenProjects = document.getElementById('hiddenProjects');
 const swedishQuizGame = document.getElementById('swedishQuizGame');
 const documentCreator = document.getElementById('docCreator');
 const donutWebshop = document.getElementById('donutWebshop');
+const isabellasSurfClub = document.getElementById('isabellasSurfClub')
 const infoIcon = document.getElementById('infoIcon');
 const infoBox = document.getElementById('infoBox');
 const infoBoxClose = document.getElementById('infoBoxClose');
@@ -38,6 +40,7 @@ function applyVisibilityState() {
     swedishQuizGame.classList.add('hidden');
     documentCreator.classList.add('hidden');
     donutWebshop.classList.add('hidden');
+    isabellasSurfClub.classList.add('hidden');
     
     
     if (visibilityState) {
@@ -54,6 +57,9 @@ function applyVisibilityState() {
         } 
         else if (visibilityState === 'donutWebshop') {
             donutWebshop.classList.remove('hidden');
+        }
+        else if (visibilityState === 'isabellasBeachClub') {
+            isabellasSurfClub.classList.remove('hidden');
         } 
         else {
             main.classList.remove('hidden');
@@ -87,6 +93,7 @@ backButton.addEventListener('click', () => {
     swedishQuizGame.classList.add('hidden');
     documentCreator.classList.add('hidden');
     donutWebshop.classList.add('hidden');
+    isabellasSurfClub.classList.add('hidden');
 
     // Restore the scroll position
     //const scrollPosition = localStorage.getItem('scrollPosition');
