@@ -47,6 +47,13 @@ h4 {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+
+        @supports not (gap: 50px) {
+            > *:not(:last-child) {
+                margin-bottom: 50px;
+            }
+        }
+
         gap: 50px;
 
         li {
@@ -115,6 +122,13 @@ h4 {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+
+        @supports not (gap: 50px) {
+            > *:not(:last-child) {
+                margin-bottom: 50px;
+            }
+        }
+
         gap: 50px;
 
         li {
@@ -175,6 +189,13 @@ h4 {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+
+        @supports not (gap: 50px) {
+            > *:not(:last-child) {
+                margin-bottom: 50px;
+            }
+        }
+        
         gap: 50px;
 
         li {
