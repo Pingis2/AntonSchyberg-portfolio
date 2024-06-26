@@ -654,6 +654,11 @@ footer {
     .footer-icons {
         @include flexRow;
         justify-content: center;
+        @supports not (gap: 50px) {
+            > *:not(:last-child) {
+                margin-right: 50px;
+            }
+        }
         gap: 50px;
         margin-top: 20px;
         
