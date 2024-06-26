@@ -496,7 +496,7 @@ h2 {
 
         @supports not (gap: 20px) {
             > *:not(:last-child) {
-                margin: 20px;
+                margin: 10px;
             }
         }
 
