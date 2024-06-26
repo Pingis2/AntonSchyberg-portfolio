@@ -610,6 +610,12 @@ h2 {
                 height: auto;
                 width: 27px;
                 margin-top: 5px;
+
+                @supports not (margin-top: 5px) {
+                    > *:not(:last-child) {
+                        margin-top: 0;
+                    }
+                }
             }
 
         }
