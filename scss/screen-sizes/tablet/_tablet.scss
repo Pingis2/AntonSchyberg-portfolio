@@ -495,9 +495,13 @@ h2 {
         margin: 40px auto 0 auto;
 
         @supports not (gap: 20px) {
-            > *:not(:first-child) {
-                margin-left: 20px;
+            > *:not(:first-child):nth-child(odd) {
                 margin-bottom: 20px;
+            }
+    
+            > *:nth-child(n + 2) {
+                margin-bottom: 20px;
+                margin-left: 20px;
             }
         }
 
