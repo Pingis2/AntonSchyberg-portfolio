@@ -294,6 +294,11 @@ button {
 .intro-buttons {
     @include flexRow;
     justify-content: center;
+
+    > *:not(:last-child) {
+        margin-right: 50px;
+    }
+
     gap: 50px;
 
     button {
