@@ -13,14 +13,15 @@
     @include mainFont;
     @include upperCase;
 
+    /*
     &::after {
         content: '';
         position: absolute;
         left: 0;
-        bottom: -2px;  // Adjust as needed to place the underline correctly
+        bottom: -2px;
         width: 0;
-        height: 2px;  // Adjust the thickness of the underline
-        background: currentColor;  // Match the underline color to the text color
+        height: 2px;
+        background: currentColor;
         transition: width .5s ease-in-out;
     }
 
@@ -31,6 +32,7 @@
             width: 100%;
         }
     }
+    */
 
     .arrow {
         width: 30px;
