@@ -82,6 +82,11 @@
     
     .project-buttons {
         @include flexRow;
+        @supports not (gap: 30px) {
+            > *:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
         gap: 30px;
         justify-content: center;
         width: auto;
