@@ -83,7 +83,7 @@ function saveScrollPosition() {
     localStorage.setItem('scrollPosition', window.scrollY);
 }
 
-backButton.addEventListener('click', () => {
+function handleBackButton() {
     localStorage.removeItem('visibilityState');
     main.classList.remove('hidden');
     sideBar.classList.add('hidden');
@@ -100,10 +100,15 @@ backButton.addEventListener('click', () => {
     //    window.scrollTo(0, parseInt(scrollPosition, 10));
     //    localStorage.removeItem('scrollPosition');
     //}
-})
+
+}
+
+backButton.addEventListener('click', handleBackButton);
+backButton.addEventListener('touchstart', handleBackButton);
 
 document.querySelectorAll('.my-other-projects').forEach(link => {
     link.addEventListener('click', saveScrollPosition);
+    link.addEventListener('touchstart', saveScrollPosition);
 });
 
 
