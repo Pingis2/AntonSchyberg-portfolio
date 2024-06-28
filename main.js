@@ -1,8 +1,8 @@
-import './other-projects/coloringGame.js';
-import './other-projects/documentCreator.js';
-import './other-projects/swedishQuiz.js';
-import './other-projects/webshop.js';
-import './other-projects/surfClub.js';
+import './other-projects-js/coloringGame.js';
+import './other-projects-js/documentCreator.js';
+import './other-projects-js/swedishQuiz.js';
+import './other-projects-js/webshop.js';
+import './other-projects-js/beachClub.js';
 import './scss/main.scss';
 
 const loaderContainer = document.getElementById('loader-container');
@@ -41,7 +41,6 @@ function applyVisibilityState() {
     documentCreator.classList.add('hidden');
     donutWebshop.classList.add('hidden');
     isabellasSurfClub.classList.add('hidden');
-    
     
     if (visibilityState) {
         hiddenProjects.classList.remove('hidden');
@@ -117,19 +116,48 @@ document.addEventListener('DOMContentLoaded', function () {
         const scrollPosition = window.scrollY + window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
         const scrollPercentage = (scrollPosition / documentHeight) * 100;
+        const windowWidth = window.innerWidth;
 
-        if (scrollPercentage >= 25) {
-            sidebar.style.opacity = 1;
-        } else if (scrollPercentage >= 20) { 
-            sidebar.style.opacity = (scrollPercentage -20) / 10;
-            sidebar.classList.remove('hidden');
+        if (windowWidth > 1439) {
+            if (scrollPercentage >= 25) {
+                sidebar.style.opacity = 1;
+            } else if (scrollPercentage >= 20) { 
+                sidebar.style.opacity = (scrollPercentage -20) / 10;
+                sidebar.classList.remove('hidden');
+            } else {
+                sidebar.style.opacity = 0;
+                //sidebar.classList.add('hidden');
+            }
         } else {
-            sidebar.style.opacity = 0;
-            sidebar.classList.add('hidden');
+            sideBar.classList.add('hidden');
         }
+        
     }
 
     window.addEventListener('scroll', checkScroll);
+
+    function handleSidebarResize() {
+
+        const visibilityState = localStorage.getItem('visibilityState');
+        if (window.innerWidth < 1440) {
+            sideBar.classList.add('hidden')
+        } else {
+            if (visibilityState === 'gridpainter' || 
+                visibilityState === 'swedishquizgame' || 
+                visibilityState === 'documentCreator' || 
+                visibilityState === 'donutWebshop' ||
+                visibilityState === 'isabellasBeachClub') {
+                sideBar.classList.add('hidden');
+            } else {
+                sideBar.classList.remove('hidden');
+            }
+            
+        }
+    }
+
+    window.addEventListener('resize', handleSidebarResize);
+
+    handleSidebarResize();
 });
 
 infoIcon.addEventListener('click', () => {

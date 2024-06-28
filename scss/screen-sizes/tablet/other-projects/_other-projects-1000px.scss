@@ -1,7 +1,7 @@
 @import '/scss/mixins/mixins';
 
 .backButton {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white;
     padding: 0;
     @include flexRow;
@@ -33,7 +33,7 @@
     }
 
     .arrow {
-        width: 40px;
+        width: 35px;
         margin-right: 5px;
         height: auto;
     }
@@ -56,11 +56,11 @@
     }
 
     .image {
-        width: 1000px;
+        width: 900px;
         @include marginCenter;
     
         img {
-            width: 1000px;
+            width: 900px;
             height: auto;
             @include marginCenter;
         }
@@ -68,7 +68,7 @@
     
     
     .textDiv {
-        width: 1000px;
+        width: 900px;
         height: auto;
         text-align: start;
         @include marginCenter;
@@ -76,7 +76,7 @@
         p {
             color: white;
             @include mainFont;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
     }
     
@@ -96,7 +96,7 @@
             font-size: 1.2rem;
             border: 1px solid white;
             border-radius: 10px;
-            width: 250px;
+            width: 200px;
             height: 70px;
             color: white;
             transition: 0.3s ease-in-out;
@@ -107,7 +107,7 @@
     
             .github-on-button {
                 width: auto;
-                height: 30px;
+                height: 25px;
                 border: none;
                 margin: 0 0 0 10px;
             }
@@ -147,13 +147,10 @@
 
         
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
         margin: 0 auto 50px auto;
         color: white;
         @include mainFont;
         text-align: center;
     }
-
 }
-
-
