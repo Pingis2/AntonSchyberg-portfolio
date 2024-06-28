@@ -84,8 +84,8 @@
 
 .star5 {
     position: absolute;
-    top: 74%;
-    left: 38%;
+    top: 60%;
+    left: 68%;
 
     span {
         width: 2px;
@@ -212,8 +212,8 @@
 
 .star13 {
     position: absolute;
-    top: 70%;
-    left: 42%;
+    top: 35%;
+    left: 47%;
 
     span {
         width: 2px;
@@ -260,8 +260,8 @@
 
 .star16 {
     position: absolute;
-    top: 37%;
-    left: 81%;
+    top: 17%;
+    left: 11%;
 
     span {
         width: 2px;
@@ -324,7 +324,167 @@
 
 .star20 {
     position: absolute;
+    top: 40%;
+    left: 95%;
+
+    span {
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: #fff;
+        animation: blink 2s linear infinite;
+        animation-delay: 0.7s;
+        display: block;
+    }
+}
+
+.star21 {
+    position: absolute;
     top: 50%;
+    left: 87%;
+
+    span {
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: #fff;
+        animation: blink 2s linear infinite;
+        animation-delay: 0.25s;
+        display: block;
+    }
+}
+
+.star22 {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+
+    span {
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: #fff;
+        animation: blink 2s linear infinite;
+        animation-delay: 0.55s;
+        display: block;
+    }
+}
+
+.star23 {
+    position: absolute;
+    top: 90%;
+    left: 10%;
+
+    span {
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: #fff;
+        animation: blink 2s linear infinite;
+        animation-delay: 0.2s;
+        display: block;
+    }
+}
+
+.star24 {
+    position: absolute;
+    top: 90%;
+    left: 45%;
+
+    span {
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: #fff;
+        animation: blink 2s linear infinite;
+        animation-delay: 0.4s;
+        display: block;
+    }
+}
+
+.star25 {
+    position: absolute;
+    top: 84%;
+    left: 62%;
+
+    span {
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: #fff;
+        animation: blink 2s linear infinite;
+        animation-delay: 0.7s;
+        display: block;
+    }
+}
+
+.star26 {
+    position: absolute;
+    top: 91%;
+    left: 78%;
+
+    span {
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: #fff;
+        animation: blink 2s linear infinite;
+        animation-delay: 0.6s;
+        display: block;
+    }
+}
+
+.star27 {
+    position: absolute;
+    top: 92%;
+    left: 21%;
+
+    span {
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: #fff;
+        animation: blink 2s linear infinite;
+        animation-delay: 0.5s;
+        display: block;
+    }
+}
+
+.star28 {
+    position: absolute;
+    top: 92%;
+    left: 56%;
+
+    span {
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: #fff;
+        animation: blink 2s linear infinite;
+        animation-delay: 0.1s;
+        display: block;
+    }
+}
+
+.star29 {
+    position: absolute;
+    top: 76%;
+    left: 93%;
+
+    span {
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: #fff;
+        animation: blink 2s linear infinite;
+        animation-delay: 0.8s;
+        display: block;
+    }
+}
+
+.star30 {
+    position: absolute;
+    top: 90%;
     left: 30%;
 
     span {
@@ -333,7 +493,7 @@
         border-radius: 100%;
         background-color: #fff;
         animation: blink 2s linear infinite;
-        animation-delay: 0.3s;
+        animation-delay: 0.5s;
         display: block;
     }
 }
