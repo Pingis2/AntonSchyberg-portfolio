@@ -2,7 +2,7 @@ import './other-projects-js/coloringGame.js';
 import './other-projects-js/documentCreator.js';
 import './other-projects-js/swedishQuiz.js';
 import './other-projects-js/webshop.js';
-import './other-projects-js/beachClub.js';
+import './other-projects-js/surfClub.js';
 import './scss/main.scss';
 
 const loaderContainer = document.getElementById('loader-container');
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 visibilityState === 'swedishquizgame' || 
                 visibilityState === 'documentCreator' || 
                 visibilityState === 'donutWebshop' ||
-                visibilityState === 'isabellasBeachClub') {
+                visibilityState === 'isabellasSurfClub') {
                 sideBar.classList.add('hidden');
             } else {
                 sideBar.classList.remove('hidden');

@@ -7,8 +7,8 @@
     @include flexRow;
     align-items: center;
     margin: 30px 0 0 30px;
-    transition: 0.3s ease-in-out;
-    transform: scale(1);
+    //transition: 0.3s ease-in-out;
+    //transform: scale(1);
     cursor: pointer;
     @include mainFont;
     @include upperCase;
@@ -107,8 +107,8 @@
             width: 200px;
             height: 70px;
             color: white;
-            transition: 0.3s ease-in-out;
-            transform: scale(1);
+            //transition: 0.3s ease-in-out;
+            //transform: scale(1);
             @include flexRow;
             align-items: center;
             justify-content: center;
@@ -120,12 +120,13 @@
                 margin: 0 0 0 10px;
             }
         }
-    
+        /*
         .button-project:hover {
             background-color: #070F2B;
             color: #fff700;
             transform: scale(1.03);
         }
+        */
 
         .button-project-not-available {
             font-size: 1rem;
@@ -134,21 +135,22 @@
             width: auto;
             height: 70px;
             color: white;
-            transition: 0.3s ease-in-out;
-            transform: scale(1);
+            //transition: 0.3s ease-in-out;
+            //transform: scale(1);
             @include flexRow;
             align-items: center;
             justify-content: center;
             margin-top: 10px;
             cursor: default;
             padding: 0 15px 0 15px;
-                    
+                   
+            /*
             .button-project-not-available:hover {
                 background-color: #070F2B;
                 color: #fff700;
                 transform: scale(1.03);
             }
-        
+            */
             
         }
     }

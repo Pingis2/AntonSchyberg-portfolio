@@ -13,7 +13,7 @@ export function printBeachClub() {
         hiddenProjects.classList.remove('hidden');
         surfClub.classList.remove('hidden');    
         
-        localStorage.setItem('visibilityState', 'isabellasBeachClub');
+        localStorage.setItem('visibilityState', 'isabellasSurfClub');
 
         
     })
