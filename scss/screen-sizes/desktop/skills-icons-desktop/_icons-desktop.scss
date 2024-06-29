@@ -49,6 +49,16 @@ h4 {
         justify-content: center;
         gap: 50px;
 
+        li {
+            border: 2px solid white;
+            width: 250px;
+            height: 70px;
+            font-size: 1.3rem;
+            @include flexRow;
+            justify-content: center;
+            align-items: center;
+        }
+
         .html {
             background-color: orange;
             border: 2px solid rgb(255, 213, 150);
@@ -88,16 +98,6 @@ h4 {
             background-color: rgb(130, 255, 138);
             border: 2px solid rgb(255, 213, 150);
         }
-    }
-
-    li {
-        border: 2px solid white;
-        width: 250px;
-        height: 70px;
-        font-size: 1.3rem;
-        @include flexRow;
-        justify-content: center;
-        align-items: center;
     }
 }
 
