@@ -5,15 +5,14 @@
 
     @media (min-width: 1000px) {
         @import './scss/screen-sizes/tablet/tablet-1000px';
-        //@import './scss/screen-sizes/tablet/other-projects/other-projects-1000px';
     }
 }
 
-@media (min-width: 1440px), (min-height: 700px) {
+@media (min-width: 1440px) and (min-height: 700px) {
     @import './scss/screen-sizes/desktop/min-height-700px/desktop';
 }
 
-@media (min-width: 1440px), (min-height: 900px) {
+@media (min-width: 1440px) and (min-height: 900px) {
     @import './scss/screen-sizes/desktop/min-height-900px/desktop';
 }
 
