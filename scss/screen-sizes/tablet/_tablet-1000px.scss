@@ -9,6 +9,8 @@ header {
     align-items: center;
     justify-content: space-between;
     @include mainFont;
+    position: relative;
+    height: 70px;
 
     .nav {
         height: 70px;
@@ -23,6 +25,10 @@ header {
         margin: 0 auto 0 auto;
         align-items: center;
         justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
     
         .seperation-line {
             width: 1px;
