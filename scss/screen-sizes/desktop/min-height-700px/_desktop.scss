@@ -1,9 +1,9 @@
 @import './scss/stars/stars';
-@import './scss/screen-sizes/desktop/skills-icons-desktop/icons-desktop';
+@import './scss/screen-sizes/desktop/min-height-900px/skills-icons-desktop/icons-desktop';
 @import './scss/mixins/mixins';
-@import './scss/screen-sizes/desktop/other-projects/other-projects-desktop';
-@import './scss/screen-sizes/desktop/info/infoIcon-desktop';
-@import './scss/screen-sizes/desktop/alert/alert-desktop';
+@import './scss/screen-sizes/desktop/min-height-900px/other-projects/other-projects-desktop';
+@import './scss/screen-sizes/desktop/min-height-900px/info/infoIcon-desktop';
+@import './scss/screen-sizes/desktop/min-height-900px/alert/alert-desktop';
 
 .hidden {
     display: none;

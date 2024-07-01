@@ -9,10 +9,12 @@
     }
 }
 
+@media (min-width: 1440px), (min-height: 700px) {
+    @import './scss/screen-sizes/desktop/min-height-700px/desktop';
+}
 
-
-@media (min-width: 1440px) {
-    @import './scss/screen-sizes/desktop/desktop';
+@media (min-width: 1440px), (min-height: 900px) {
+    @import './scss/screen-sizes/desktop/min-height-900px/desktop';
 }
 
 
