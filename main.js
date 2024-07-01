@@ -69,19 +69,16 @@ function applyVisibilityState() {
         main.classList.remove('hidden');
         sideBar.classList.remove('hidden');
     }
-
-    const scrollPosition = localStorage.getItem('scrollPosition');
-    if (scrollPosition) {
-        window.scrollTo(0, parseInt(scrollPosition, 10));
-        localStorage.removeItem('scrollPosition');
-    }
 }
 
 document.addEventListener('DOMContentLoaded', applyVisibilityState);
 
 function saveScrollPosition() {
-    localStorage.setItem('scrollPosition', window.scrollY);
+    const scrollPosition = window.scrollY;
+    sessionStorage.setItem('scrollPosition', scrollPosition);
 }
+
+saveScrollPosition();
 
 function handleBackButton() {
     localStorage.removeItem('visibilityState');
@@ -95,11 +92,10 @@ function handleBackButton() {
     isabellasSurfClub.classList.add('hidden');
 
     // Restore the scroll position
-    //const scrollPosition = localStorage.getItem('scrollPosition');
-    //if (scrollPosition) {
-    //    window.scrollTo(0, parseInt(scrollPosition, 10));
-    //    localStorage.removeItem('scrollPosition');
-    //}
+    const scrollPosition = sessionStorage.getItem('scrollPosition');
+    if (scrollPosition !== null) {
+        window.scrollTo(0, parseInt(scrollPosition, 10));
+    }
 
 }
 
@@ -109,6 +105,13 @@ backButton.addEventListener('touchstart', handleBackButton);
 document.querySelectorAll('.my-other-projects').forEach(link => {
     link.addEventListener('click', saveScrollPosition);
     link.addEventListener('touchstart', saveScrollPosition);
+});
+
+window.addEventListener('load', () => {
+    const scrollPosition = sessionStorage.getItem('scrollPosition');
+    if (scrollPosition !== null) {
+        window.scrollTo(0, parseInt(scrollPosition, 10));
+    }
 });
 
 
