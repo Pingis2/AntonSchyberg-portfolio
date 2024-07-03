@@ -90,7 +90,6 @@ function handleBackButton() {
     donutWebshop.classList.add('hidden');
     isabellasSurfClub.classList.add('hidden');
 
-    // Restore the scroll position
     const scrollPosition = sessionStorage.getItem('scrollPosition');
     if (scrollPosition !== null) {
         window.scrollTo(0, parseInt(scrollPosition, 10));
@@ -126,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 sidebar.classList.remove('hidden');
             } else {
                 sidebar.style.opacity = 0;
-                //sidebar.classList.add('hidden');
             }
         } else {
             sideBar.classList.add('hidden');
