@@ -3,6 +3,7 @@ import './other-projects-js/documentCreator.js';
 import './other-projects-js/swedishQuiz.js';
 import './other-projects-js/webshop.js';
 import './other-projects-js/surfClub.js';
+import { saveScrollPosition, restoreScrollPosition } from './save-scroll-js/save-scroll.js';
 import './scss/main.scss';
 
 const loaderContainer = document.getElementById('loader-container');
@@ -29,6 +30,7 @@ export function loaderContainerFunction() {
         
     });
 }
+
 
 function applyVisibilityState() {
     const visibilityState = localStorage.getItem('visibilityState');
@@ -71,14 +73,11 @@ function applyVisibilityState() {
     }
 }
 
+
 document.addEventListener('DOMContentLoaded', applyVisibilityState);
 
-function saveScrollPosition() {
-    const scrollPosition = window.scrollY;
-    sessionStorage.setItem('scrollPosition', scrollPosition);
-}
-
 saveScrollPosition();
+restoreScrollPosition();
 
 function handleBackButton() {
     localStorage.removeItem('visibilityState');
@@ -105,13 +104,6 @@ backButton.addEventListener('touchstart', handleBackButton);
 document.querySelectorAll('.my-other-projects').forEach(link => {
     link.addEventListener('click', saveScrollPosition);
     link.addEventListener('touchstart', saveScrollPosition);
-});
-
-window.addEventListener('load', () => {
-    const scrollPosition = sessionStorage.getItem('scrollPosition');
-    if (scrollPosition !== null) {
-        window.scrollTo(0, parseInt(scrollPosition, 10));
-    }
 });
 
 
