@@ -19,6 +19,10 @@ body {
     //background-color: #082752;
 }
 
+body.hidden-content #main, body.hidden-content #sidebar, body.hidden-content #hiddenProjects {
+    display: none;
+}
+
 .loader-container {
     width: 100%;
     height: 100vh;
@@ -27,8 +31,8 @@ body {
     align-items: center;
     position: fixed;
     background: #000;
-    z-index: 2;
-    animation: shrink-container 0.5s linear forwards;
+    z-index: 999;
+    animation: shrink-container 1s linear forwards;
     //animation-delay: .2s;
 }
 

@@ -9,11 +9,11 @@
 }
 
 @media (min-width: 1440px) and (min-height: 700px) {
-    @import './scss/screen-sizes/desktop/min-height-700px/desktop';
+    @import './scss/screen-sizes/desktop/min-height-700px/desktop-700px';
 }
 
 @media (min-width: 1440px) and (min-height: 900px) {
-    @import './scss/screen-sizes/desktop/min-height-900px/desktop';
+    @import './scss/screen-sizes/desktop/min-height-900px/desktop-900px';
 }
 
 
