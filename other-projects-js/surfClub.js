@@ -6,16 +6,25 @@ const surfClub = document.getElementById('isabellasSurfClub');
 
 export function printBeachClub() {
     projectDiv.addEventListener('click', () => {
-        window.scrollTo(0, 0);
         main.classList.add('hidden');
         sideBar.classList.add('hidden');
 
         hiddenProjects.classList.remove('hidden');
         surfClub.classList.remove('hidden');    
         
-        localStorage.setItem('visibilityState', 'isabellasSurfClub');
+        sessionStorage.setItem('visibilityState', 'isabellasSurfClub');
 
-        
+        // Temporarily disable smooth scroll
+        document.documentElement.style.scrollBehavior = 'auto';
+
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+            
+            // Re-enable smooth scroll after scrolling
+            requestAnimationFrame(() => {
+                document.documentElement.style.scrollBehavior = 'smooth';
+            });
+        }, 0);
     })
 }
 

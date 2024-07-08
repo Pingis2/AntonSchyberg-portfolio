@@ -6,14 +6,25 @@ const swedishQuizGame = document.getElementById('swedishQuizGame');
 
 export function printSwedishQuiz() {
     projectDiv.addEventListener('click', () => {
-        window.scrollTo(0, 0);
         main.classList.add('hidden');
         sideBar.classList.add('hidden');
 
         hiddenProjects.classList.remove('hidden');
         swedishQuizGame.classList.remove('hidden');    
         
-        localStorage.setItem('visibilityState', 'swedishquizgame');
+        sessionStorage.setItem('visibilityState', 'swedishquizgame');
+
+        // Temporarily disable smooth scroll
+        document.documentElement.style.scrollBehavior = 'auto';
+
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+            
+            // Re-enable smooth scroll after scrolling
+            requestAnimationFrame(() => {
+                document.documentElement.style.scrollBehavior = 'smooth';
+            });
+        }, 0);
     })
 }
 

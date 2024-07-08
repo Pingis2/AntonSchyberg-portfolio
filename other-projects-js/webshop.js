@@ -6,14 +6,25 @@ const donutWebshop = document.getElementById('donutWebshop');
 
 export function printDonutWebshop() {
     projectDiv.addEventListener('click', () => {
-        window.scrollTo(0, 0);
         main.classList.add('hidden');
         sideBar.classList.add('hidden');
 
         hiddenProjects.classList.remove('hidden');
         donutWebshop.classList.remove('hidden');    
         
-        localStorage.setItem('visibilityState', 'donutWebshop');
+        sessionStorage.setItem('visibilityState', 'donutWebshop');
+
+        // Temporarily disable smooth scroll
+        document.documentElement.style.scrollBehavior = 'auto';
+
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+            
+            // Re-enable smooth scroll after scrolling
+            requestAnimationFrame(() => {
+                document.documentElement.style.scrollBehavior = 'smooth';
+            });
+        }, 0);
     })
 }
 

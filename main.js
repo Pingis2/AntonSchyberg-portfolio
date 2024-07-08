@@ -22,18 +22,30 @@ const infoBoxClose = document.getElementById('infoBoxClose');
 
 export function loaderContainerFunction() {
     window.addEventListener('load', () => {
+
+        document.documentElement.style.scrollBehavior = 'auto';
+
         setTimeout(() => {
+            // Start the loader animation
+            loaderContainer.style.animation = "shrink-container 1s linear forwards";
+
+            // Re-enable smooth scroll after the animation
+            requestAnimationFrame(() => {
+                document.documentElement.style.scrollBehavior = 'smooth';
+            });
+
+            // Wait for the animation to complete and then remove hidden-content class
             setTimeout(() => {
-                loaderContainer.style.animation = "shrink-container 1s linear forwards";
-            }, 800);
-        }, 200);
+                document.body.classList.remove('hidden-content');
+            }, 1000); // Adjust the delay based on your animation duration
+        }, 200); // Adjust this delay if needed
         
     });
 }
 
 
 function applyVisibilityState() {
-    const visibilityState = localStorage.getItem('visibilityState');
+    const visibilityState = sessionStorage.getItem('visibilityState');
 
     main.classList.add('hidden');
     sideBar.classList.add('hidden');
@@ -59,7 +71,7 @@ function applyVisibilityState() {
         else if (visibilityState === 'donutWebshop') {
             donutWebshop.classList.remove('hidden');
         }
-        else if (visibilityState === 'isabellasBeachClub') {
+        else if (visibilityState === 'isabellasSurfClub') {
             isabellasSurfClub.classList.remove('hidden');
         } 
         else {
@@ -71,6 +83,20 @@ function applyVisibilityState() {
         main.classList.remove('hidden');
         sideBar.classList.remove('hidden');
     }
+
+    const scrollPosition = sessionStorage.getItem('scrollPosition');
+    if (scrollPosition !== null) {
+        // Temporarily disable smooth scroll
+        document.documentElement.style.scrollBehavior = 'auto';
+        
+        // Scroll to the saved position
+        window.scrollTo(0, parseInt(scrollPosition, 10));
+        
+        // Re-enable smooth scroll after scrolling
+        requestAnimationFrame(() => {
+            document.documentElement.style.scrollBehavior = 'smooth';
+        });
+    }
 }
 
 
@@ -80,7 +106,7 @@ saveScrollPosition();
 restoreScrollPosition();
 
 function handleBackButton() {
-    localStorage.removeItem('visibilityState');
+    sessionStorage.removeItem('visibilityState');
     main.classList.remove('hidden');
     sideBar.classList.add('hidden');
     hiddenProjects.classList.add('hidden');
@@ -92,7 +118,15 @@ function handleBackButton() {
 
     const scrollPosition = sessionStorage.getItem('scrollPosition');
     if (scrollPosition !== null) {
+
+        document.documentElement.style.scrollBehavior = 'auto';
+
         window.scrollTo(0, parseInt(scrollPosition, 10));
+
+        requestAnimationFrame(() => {
+            document.documentElement.style.scrollBehavior = 'smooth';
+            sideBar.classList.remove('hidden');
+        })
     }
 
 }
@@ -136,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function handleSidebarResize() {
 
-        const visibilityState = localStorage.getItem('visibilityState');
+        const visibilityState = sessionStorage.getItem('visibilityState');
         if (window.innerWidth < 1440) {
             sideBar.classList.add('hidden')
         } else {

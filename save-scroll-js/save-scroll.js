@@ -1,6 +1,6 @@
 export function saveScrollPosition() {
     const fordbiddenValues = ['gridpainter', 'swedishquizgame', 'documentCreator', 'donutWebshop', 'isabellasSurfClub'];
-    const visibilityState = localStorage.getItem('visibilityState');
+    const visibilityState = sessionStorage.getItem('visibilityState');
 
     if (!fordbiddenValues.includes(visibilityState)) {
         const scrollPosition = window.scrollY;
