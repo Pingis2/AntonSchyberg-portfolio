@@ -56,11 +56,11 @@
     }
 
     .image {
-        width: 1000px;
+        width: 800px;
         @include marginCenter;
     
         img {
-            width: 1000px;
+            width: 800px;
             height: auto;
             @include marginCenter;
         }
@@ -68,7 +68,7 @@
     
     
     .textDiv {
-        width: 1000px;
+        width: 800px;
         height: auto;
         text-align: start;
         @include marginCenter;
@@ -76,7 +76,7 @@
         p {
             color: white;
             @include mainFont;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
     }
     
@@ -147,7 +147,7 @@
 
         
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
         margin: 0 auto 50px auto;
         color: white;
         @include mainFont;
