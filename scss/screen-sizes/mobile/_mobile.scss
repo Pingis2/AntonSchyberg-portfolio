@@ -1,8 +1,8 @@
 @import './scss/stars/stars';
 @import './scss/mixins/mixins';
-@import './scss/screen-sizes/tablet/alert/alert-tablet';
-@import './scss/screen-sizes/tablet/skills-icons-tablet/icons-tablet';
-@import './scss/screen-sizes/tablet/other-projects/other-projects-tablet';
+@import './scss/screen-sizes/mobile/alert/alert-mobile';
+@import './scss/screen-sizes/mobile/skills-icons/icons-mobile';
+@import './scss/screen-sizes/mobile/other-projects/other-projects-mobile';
 
 
 .hidden {
@@ -44,49 +44,11 @@ body {
 
 header {
     @include flexCol;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-end;
     @include mainFont;
 
     .nav {
-        height: 70px;
-        width: 730px;
-        border-radius: 0 0 10px 10px;
-        background-color: #070F2B;
-        border-bottom: 1px solid #535C91;
-        border-left: 1px solid #535C91;
-        border-right: 1px solid #535C91;
-        text-align: center;
-        @include flexRow;
-        @include marginCenter;
-        align-items: center;
-        justify-content: center;
-    
-        .seperation-line {
-            width: 1px;
-            height: 20px;
-            background-color: white;
-            margin: 0;
-            padding: 0;
-        }
-    
-        .nav-content {
-            font-size: 1.2rem;
-            color: #9290C3;
-            width: 180px;
-            height: auto;
-        
-            p {
-                height: auto;
-                margin: 0;
-                @include upperCase;
-            }
-        }
-
-        .nav-content :hover {
-            color: white;
-            transition: .2s ease-in-out;
-        }
+        display: none;
     }
 }
 
@@ -200,6 +162,24 @@ button {
     }
 }
 
+.burger-menu {
+    display: block;
+    margin: 0 0 0 0;
+
+    .burger {
+        @include flexCol;
+        gap: 10px;
+        padding: 10px 10px 0 0;
+        
+        span {
+            width: 40px;
+            height: 2px;
+            background-color: white;
+        }
+        
+    }
+}
+
 /*-------------------------------------intro page-------------------------------------*/
 
 .sidebar {
@@ -268,26 +248,26 @@ button {
 
 .intro {
     @include mainFont;
-    height: 700px;
+    height: 400px;
     text-align: center;
-    width: 730px;
+    width: 350px;
     margin: 0 auto 0 auto;
     color: white;
-    margin-top: 200px;
+    margin-top: 100px;
     text-shadow: 2px 5px 20px black;
 
     h1 {
-        font-size: 4rem;
+        font-size: 2.5rem;
         margin: 0;
     }
 
     .text1 {
-        font-size: 3rem;
+        font-size: 2rem;
         margin: 0;
     }
 
     .text2 {
-        font-size: 2rem;
+        font-size: 1rem;
         margin: 0;
     }
 }
@@ -296,40 +276,28 @@ button {
     @include flexRow;
     justify-content: center;
 
-    @supports not (gap: 50px) {
+    @supports not (gap: 20px) {
         > *:not(:last-child) {
-            margin-right: 50px;
+            margin-right: 20px;
         }
     }
     
 
-    gap: 50px;
+    gap: 20px;
 
     button {
         @include mainFont;
-        width: 220px;
-        height: 70px;
+        width: 130px;
+        height: 60px;
         border: 1px solid white;
         border-radius: 10px;
         box-shadow: 0 6px 5px -5px black;
         margin: 100px 0 0 0;
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: white;
         transition: 0.3s ease-in-out;
         transform: scale(1);
     }
-}
-
-.intro-buttons .about-me-button:hover {
-    background-color: #070F2B;
-    color: #00ff1a;
-    transform: scale(1.03);
-}
-
-.intro-buttons .some-other-button:hover {
-    background-color: #070F2B;
-    color: #fff700;
-    transform: scale(1.03);
 }
 
 /*--------------------------------about me section------------------------------------------*/
