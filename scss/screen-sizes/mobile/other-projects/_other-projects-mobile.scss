@@ -1,0 +1,166 @@
+@import '/scss/mixins/mixins';
+
+.backButton {
+    font-size: 1.5rem;
+    color: white;
+    padding: 0;
+    @include flexRow;
+    align-items: center;
+    margin: 30px 0 0 30px;
+    //transition: 0.3s ease-in-out;
+    //transform: scale(1);
+    cursor: pointer;
+    @include mainFont;
+    @include upperCase;
+
+    /*
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: currentColor;
+        transition: width .5s ease-in-out;
+    }
+
+    &:hover {
+        transform: scale(1.03);
+
+        &::after {
+            width: 100%;
+        }
+    }
+    */
+
+    .arrow {
+        width: 30px;
+        margin-right: 5px;
+        height: auto;
+    }
+
+    p {
+        margin: 0;
+        width: auto;
+    }
+}
+
+
+.gameDisplay {
+    @include flexCol;
+
+    a{
+        height: auto;
+        width: 120px;
+        padding: 10px;
+        margin: 30px 0 0 30px;
+    }
+
+    .image {
+        width: 670px;
+        @include marginCenter;
+    
+        img {
+            width: 670px;
+            height: auto;
+            @include marginCenter;
+        }
+    }
+    
+    
+    .textDiv {
+        width: 670px;
+        height: auto;
+        text-align: start;
+        @include marginCenter;
+    
+        p {
+            color: white;
+            @include mainFont;
+            font-size: 1.2rem;
+        }
+    }
+    
+    .project-buttons {
+        @include flexRow;
+
+        @supports not (gap: 30px) {
+            > *:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+        gap: 30px;
+        justify-content: center;
+        width: auto;
+    
+        a {
+            width: auto;
+            text-decoration: none;
+            margin: 0 0 30px 0;
+        }
+        
+        .button-project {
+            font-size: 1rem;
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 200px;
+            height: 70px;
+            color: white;
+            //transition: 0.3s ease-in-out;
+            //transform: scale(1);
+            @include flexRow;
+            align-items: center;
+            justify-content: center;
+    
+            .github-on-button {
+                width: auto;
+                height: 20px;
+                border: none;
+                margin-left: 10px;
+            }
+        }
+        /*
+        .button-project:hover {
+            background-color: #070F2B;
+            color: #fff700;
+            transform: scale(1.03);
+        }
+        */
+
+        .button-project-not-available {
+            font-size: 1rem;
+            border: 1px solid white;
+            border-radius: 10px;
+            width: auto;
+            height: 70px;
+            color: white;
+            //transition: 0.3s ease-in-out;
+            //transform: scale(1);
+            @include flexRow;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            cursor: default;
+            padding: 0 15px 0 15px;
+                   
+            /*
+            .button-project-not-available:hover {
+                background-color: #070F2B;
+                color: #fff700;
+                transform: scale(1.03);
+            }
+            */
+            
+        }
+    }
+
+        
+    h1 {
+        font-size: 3rem;
+        margin: 0 auto 50px auto;
+        color: white;
+        @include mainFont;
+        text-align: center;
+    }
+}

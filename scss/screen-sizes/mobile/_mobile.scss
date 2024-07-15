@@ -1,0 +1,703 @@
+@import './scss/stars/stars';
+@import './scss/mixins/mixins';
+@import './scss/screen-sizes/tablet/alert/alert-tablet';
+@import './scss/screen-sizes/tablet/skills-icons-tablet/icons-tablet';
+@import './scss/screen-sizes/tablet/other-projects/other-projects-tablet';
+
+
+.hidden {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #082752 0%, #2e62ff 50%, #082752 90%);
+}
+
+.loader-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background: #000;
+    z-index: 2;
+    animation: shrink-container 0.5s linear forwards;
+}
+
+@keyframes shrink-container {
+    0% {
+        height: 100vh;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+/*--------------------------------------nav menu---------------------------------------*/
+
+header {
+    @include flexCol;
+    align-items: center;
+    justify-content: space-between;
+    @include mainFont;
+
+    .nav {
+        height: 70px;
+        width: 730px;
+        border-radius: 0 0 10px 10px;
+        background-color: #070F2B;
+        border-bottom: 1px solid #535C91;
+        border-left: 1px solid #535C91;
+        border-right: 1px solid #535C91;
+        text-align: center;
+        @include flexRow;
+        @include marginCenter;
+        align-items: center;
+        justify-content: center;
+    
+        .seperation-line {
+            width: 1px;
+            height: 20px;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .nav-content {
+            font-size: 1.2rem;
+            color: #9290C3;
+            width: 180px;
+            height: auto;
+        
+            p {
+                height: auto;
+                margin: 0;
+                @include upperCase;
+            }
+        }
+
+        .nav-content :hover {
+            color: white;
+            transition: .2s ease-in-out;
+        }
+    }
+}
+
+
+
+.icons-left {
+    @include flexRow;
+    align-items: center;
+    margin: 0 0 0 30px;
+    gap: 20px;
+    display: none;
+
+    .linkedin {
+        height: auto;
+        width: 30px;
+        fill: #535C91;
+        transition: .2s ease;
+    }
+
+    .linkedin:hover {
+        fill: white;
+    }
+
+    .github {
+        height: auto;
+        width: 30px;
+
+        path {
+            fill: #535C91;
+            transition: .2s ease;
+        }
+    }
+
+    .github-link:hover .github path {
+        fill: white;
+    }
+}
+
+
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.icons-right {
+    display: none;
+
+    .info {
+        margin: 0 30px 0 0;
+        height: 50px;
+        width: auto;
+        cursor: pointer;   
+        
+        .info-icon {
+            height: auto;
+            width: 35px;
+        }
+
+        .info-icon path {
+            fill: #535C91;
+            transition: .2s ease-in-out;
+        }
+    }
+
+    .info:hover .info-icon path{
+        fill: white;
+    }
+}
+
+.info-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin: 20px 20px 0 0;
+
+    .info-box-close {
+        text-align: left;
+    }
+
+    p {
+        @include mainFont;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .info-box-button {
+        width: auto;
+        height: auto;
+        border: black 1px solid;
+        @include flexRow;
+        align-items: center;
+        @include marginCenter;
+
+        .github-on-button {
+            width: auto;
+            height: 30px;
+            border: none;
+            margin: 0 0 0 10px;
+        }
+    }
+}
+
+/*-------------------------------------intro page-------------------------------------*/
+
+.sidebar {
+    font-size: 1.4rem;
+    position: fixed;
+    top: 40%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    //display: none;
+    
+    ul {
+        @include flexCol;
+        gap: 20px;
+        list-style: none;
+        padding-left: 20px;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        
+
+        li {
+            transition: 0.3s ease-in-out;
+            transform: scale(1);
+            cursor: pointer;
+            @include upperCase;
+            color: white;
+            @include mainFont;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 0;
+                height: 2px;
+                background: currentColor;
+                transition: width .5s ease-in-out;
+            }
+
+            &:hover {
+                transform: scale(1.03);
+                color: rgb(131, 131, 131);
+
+                &::after {
+                    width: 100%;
+                }
+            }
+    
+            
+        }
+
+        
+
+        
+    }
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
+
+
+.intro {
+    @include mainFont;
+    height: 700px;
+    text-align: center;
+    width: 730px;
+    margin: 0 auto 0 auto;
+    color: white;
+    margin-top: 200px;
+    text-shadow: 2px 5px 20px black;
+
+    h1 {
+        font-size: 4rem;
+        margin: 0;
+    }
+
+    .text1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    .text2 {
+        font-size: 2rem;
+        margin: 0;
+    }
+}
+
+.intro-buttons {
+    @include flexRow;
+    justify-content: center;
+
+    @supports not (gap: 50px) {
+        > *:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+    
+
+    gap: 50px;
+
+    button {
+        @include mainFont;
+        width: 220px;
+        height: 70px;
+        border: 1px solid white;
+        border-radius: 10px;
+        box-shadow: 0 6px 5px -5px black;
+        margin: 100px 0 0 0;
+        font-size: 1.2rem;
+        color: white;
+        transition: 0.3s ease-in-out;
+        transform: scale(1);
+    }
+}
+
+.intro-buttons .about-me-button:hover {
+    background-color: #070F2B;
+    color: #00ff1a;
+    transform: scale(1.03);
+}
+
+.intro-buttons .some-other-button:hover {
+    background-color: #070F2B;
+    color: #fff700;
+    transform: scale(1.03);
+}
+
+/*--------------------------------about me section------------------------------------------*/
+
+.about-me {
+    padding-top: 50px;
+
+    .flex {
+        height: 900px;
+        width: 690px;
+        margin: 0 auto 0 auto;
+    
+        .profile-image {
+            width: 350px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: -10px 10px 30px;
+            float: left;
+            position: relative;
+            margin: 0 50px 30px 0;
+        }
+    
+        .text {
+            @include mainFont;
+            width: 700px;
+    
+            h3 {
+                font-size: 1.5rem;
+                margin: 0;
+                color: white;
+            }
+        
+            p {
+                margin: 0;
+                font-size: 1.5rem;
+                color: white;
+                position: relative;
+            }
+        }
+    }
+}
+
+/*--------------------------------------project section-----------------------------------------------*/
+
+h2 {
+    font-size: 3rem;
+    @include mainFont;
+    text-align: center;
+    margin: 0 0 40px 0;
+    color: white
+}
+
+.my-projects {
+    @include flexCol;
+    @include marginCenter;
+    
+    .my-latest-project {
+        width: 650px;
+        height: auto;
+        margin: 50px auto 0 auto;
+        border-radius: 20px;
+        
+    
+        h3 {
+            font-size: 2.5rem;
+            @include mainFont;
+            text-align: center;
+            color: white;
+            margin: 0 0 40px 0;
+            width: 300px;
+            padding: 0;
+            width: auto;
+        }
+    
+        .image{
+            width: 650px;
+            box-shadow: 0 2px 5px;
+    
+            img {
+                width: 650px;
+                height: auto;
+            }
+        } 
+
+        .description {
+            width: 650px;
+            height: auto;
+            margin: 30px 0 0 0;
+            border-radius: 10px;
+
+            .desc-text {
+                margin: 0;
+                padding: 0;
+                font-size: 1.2rem;
+                @include mainFont;
+                text-align: left;
+                color: white;
+            }
+        }
+
+        .project-buttons {
+            @include flexRow;
+
+            @supports not (gap: 30px) {
+                > *:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+
+            gap: 30px;
+            margin: 20px auto 0 auto;
+            justify-content: flex-start;
+            width: 530px;
+
+            a {
+                width: auto;
+                text-decoration: none;
+            }
+            
+            button {
+                font-size: 1.2rem;
+                border: 1px solid white;
+                border-radius: 10px;
+                width: 250px;
+                height: 70px;
+                color: white;
+                transition: 0.3s ease-in-out;
+                transform: scale(1);
+                @include flexRow;
+                align-items: center;
+                justify-content: center;
+
+                .github-on-button {
+                    width: auto;
+                    height: 30px;
+                    border: none;
+                    margin: 0 0 0 10px;
+                }
+            }
+
+            .button-project:hover {
+                background-color: #070F2B;
+                color: #fff700;
+                transform: scale(1.03);
+            }
+
+            
+        }
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        @include mainFont;
+        text-align: center;
+        margin: 100px auto 0 auto;
+        color: white;
+        width: 400px;
+    }
+
+    .my-other-projects {
+        @include flexRow;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 40px auto 0 auto;
+
+        @supports not (gap: 20px) {
+            // Add margin-left and margin-bottom to every even element
+            > *:nth-child(2n) {
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+    
+            // Add margin-bottom to every odd element
+            > *:nth-child(2n+1) {
+                margin-bottom: 20px;
+            }
+        }
+
+        gap: 20px;
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+    
+        .small-project {
+            height: 170px;
+            width: 300px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 10px;
+            transition: .5s ease;
+            opacity: 1;
+            box-shadow: 0 3px 5px;
+            cursor: pointer;
+
+            p {
+                font-size: 1.3rem;
+                @include mainFont;
+                color: white;
+                position: absolute;
+                opacity: 0;
+                transition: opacity .5s ease;
+            }
+
+            img {
+                width: 350px;
+                height: auto;
+                transition: opacity .5s ease;
+            }
+
+            &:hover img {
+                opacity: 0.3;
+            }
+
+            &:hover p {
+                opacity: 1;
+            }
+        }
+
+        
+    }
+}
+
+/*-------------------------------my contacts------------------------------------*/
+
+.contacts {
+    //height: 60vh;
+    @include mainFont;
+
+    h3 {
+        text-transform: uppercase;
+        color: white;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.3rem;
+        text-align: center;
+        color: white;
+        
+    }
+
+    .headers {
+        @include flexRow;
+        justify-content: center;
+
+        @supports not (gap: 100px) {
+            > *:not(:last-child) {
+                margin-right: 100px;
+            }
+        }
+        gap: 100px;
+
+        h5 {
+            font-size: 1.5rem;
+            text-align: center;
+            color: white;
+        }
+
+        .name-and-link {
+            @include flexRow;
+
+            @supports not (gap: 20px) {
+                > *:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+            gap: 20px;
+
+            p {
+                margin: 0;
+            }
+
+            .icon {
+                fill: white;
+                height: auto;
+                width: 27px;
+                margin-top: 5px;
+
+                @supports not (margin-top: 5px) {
+                    > *:not(:last-child) {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+        }
+    } 
+}
+
+
+/*-------------------------------footer------------------------------------*/
+footer {
+    background-color: #061a36;
+    box-shadow: 0px 0px 0px 1px rgb(82, 82, 82);
+    width: 100%;
+    height: 300px;
+    @include flexCol;
+    justify-content: center;
+
+    .footer-list {
+        display: flex;
+        justify-content: center;
+
+        @supports not (gap: 40px) {
+            > *:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
+        gap: 40px;
+
+        a {
+            color: #535C91;
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+            display: inline;
+            @include mainFont;
+            font-size: 1.2rem;
+            @include upperCase;
+        }
+    }
+
+    .footer-icons {
+        @include flexRow;
+        justify-content: center;
+        @supports not (gap: 50px) {
+            > *:not(:last-child) {
+                margin-right: 50px;
+            }
+        }
+        gap: 50px;
+        margin-top: 20px;
+        
+        .icon {
+            height: auto;
+            width: 30px;
+            //stroke: white;
+            fill: #535C91;
+        }
+    }
+
+
+    
+}
+
+.fading-line-horizontal {
+    margin: 100px auto 100px auto;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(118, 118, 118, 0), rgb(118, 118, 118) 20%, rgb(118, 118, 118) 80%, rgba(118, 118, 118, 0));
+}
+
+.fading-line-horizontal-footer {
+    @include marginCenter;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(118, 118, 118, 0), rgb(118, 118, 118) 20%, rgb(118, 118, 118) 80%, rgba(118, 118, 118, 0));
+}
+
+.fading-line-vertical {
+    width: 1px;
+    height: 300px;
+    margin-bottom: 40px;
+    background: linear-gradient(to bottom, rgba(118, 118, 118, 0), rgb(118, 118, 118) 20%, rgb(118, 118, 118) 80%, rgba(118, 118, 118, 0));
+}
