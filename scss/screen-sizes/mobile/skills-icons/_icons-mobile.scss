@@ -19,7 +19,7 @@
 
 h4 {
     color: white;
-    font-size: 2rem;
+    font-size: 1.4rem;
     @include mainFont;
     margin: 0 auto 50px auto;
     width: 200px;
@@ -38,7 +38,7 @@ h4 {
     color: black;
     @include mainFont;
     @include flexCol;
-    width: 400px;
+    width: 100px;
     margin: 50px 0 50px 0;
     padding: 0;
 
@@ -48,19 +48,19 @@ h4 {
         align-items: center;
         justify-content: center;
 
-        @supports not (gap: 50px) {
+        @supports not (gap: 20px) {
             > *:not(:last-child) {
-                margin-bottom: 50px;
+                margin-bottom: 20px;
             }
         }
 
-        gap: 50px;
+        gap: 20px;
 
         li {
             border: 2px solid white;
-            width: 200px;
+            width: 100px;
             height: 70px;
-            font-size: 1.1rem;
+            font-size: 0.8rem;
             @include flexRow;
             justify-content: center;
             align-items: center;
@@ -113,7 +113,7 @@ h4 {
     color: black;
     @include mainFont;
     @include flexCol;
-    width: 400px;
+    width: 200px;
     margin: 50px 0 50px 0;
     padding: 0;
 
@@ -133,9 +133,9 @@ h4 {
 
         li {
             border: 2px solid white;
-            width: 200px;
+            width: 100px;
             height: 70px;
-            font-size: 1.1rem;
+            font-size: 0.8rem;
             @include flexRow;
             justify-content: center;
             align-items: center;
@@ -180,7 +180,7 @@ h4 {
     color: black;
     @include mainFont;
     @include flexCol;
-    width: 400px;
+    width: 200px;
     margin: 50px 0 50px 0;
     padding: 0;
 
@@ -200,9 +200,9 @@ h4 {
 
         li {
             border: 2px solid white;
-            width: 200px;
+            width: 100px;
             height: 70px;
-            font-size: 1.1rem;
+            font-size: 0.8rem;
             @include flexRow;
             justify-content: center;
             align-items: center;
