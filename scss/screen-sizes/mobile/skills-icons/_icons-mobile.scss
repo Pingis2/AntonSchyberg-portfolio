@@ -5,7 +5,7 @@
 
     h2 {
         margin: auto 0;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -19,10 +19,10 @@
 
 h4 {
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     @include mainFont;
     margin: 0 auto 50px auto;
-    width: 200px;
+    width: 100px;
     text-align: center;
     height: 50px;
 }
@@ -113,7 +113,7 @@ h4 {
     color: black;
     @include mainFont;
     @include flexCol;
-    width: 200px;
+    width: 100px;
     margin: 50px 0 50px 0;
     padding: 0;
 
@@ -123,13 +123,13 @@ h4 {
         align-items: center;
         justify-content: center;
 
-        @supports not (gap: 50px) {
+        @supports not (gap: 20px) {
             > *:not(:last-child) {
-                margin-bottom: 50px;
+                margin-bottom: 20px;
             }
         }
 
-        gap: 50px;
+        gap: 20px;
 
         li {
             border: 2px solid white;
@@ -180,7 +180,7 @@ h4 {
     color: black;
     @include mainFont;
     @include flexCol;
-    width: 200px;
+    width: 100px;
     margin: 50px 0 50px 0;
     padding: 0;
 
@@ -190,13 +190,13 @@ h4 {
         align-items: center;
         justify-content: center;
 
-        @supports not (gap: 50px) {
+        @supports not (gap: 20px) {
             > *:not(:last-child) {
-                margin-bottom: 50px;
+                margin-bottom: 20px;
             }
         }
 
-        gap: 50px;
+        gap: 20px;
 
         li {
             border: 2px solid white;
