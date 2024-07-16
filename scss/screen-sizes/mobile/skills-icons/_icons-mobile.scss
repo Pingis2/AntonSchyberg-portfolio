@@ -30,8 +30,8 @@ h4 {
 
 .stack-icon{
     width: auto;
-    height: 30px;
-    margin-left: 10px;
+    height: 20px;
+    margin-left: 5px;
 }
 
 .front-end {
@@ -136,7 +136,7 @@ h4 {
             border: 2px solid white;
             width: 100px;
             height: 70px;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             @include flexRow;
             justify-content: center;
             align-items: center;

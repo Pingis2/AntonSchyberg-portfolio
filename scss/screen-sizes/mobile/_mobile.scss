@@ -251,7 +251,7 @@ button {
     @include mainFont;
     height: 400px;
     text-align: center;
-    width: 350px;
+    width: 100%;
     margin: 0 auto 0 auto;
     color: white;
     margin-top: 100px;
@@ -308,7 +308,7 @@ button {
 
     .flex {
         height: auto;
-        width: 350px;
+        width: 100%;
         margin: 0 auto 0 auto;
     
         .profile-image {
@@ -357,7 +357,7 @@ h2 {
     @include marginCenter;
     
     .my-latest-project {
-        width: 350px;
+        width: 100%;
         height: auto;
         margin: 0 auto 0 auto;
         border-radius: 20px;
@@ -385,7 +385,7 @@ h2 {
         } 
 
         .description {
-            width: 350px;
+            width: 100%;
             height: auto;
             margin: 30px 0 0 0;
             border-radius: 10px;
@@ -395,7 +395,7 @@ h2 {
                 padding: 0;
                 font-size: 1rem;
                 @include mainFont;
-                text-align: left;
+                text-align: center;
                 color: white;
             }
         }
@@ -411,8 +411,8 @@ h2 {
 
             gap: 15px;
             margin: 20px auto 0 auto;
-            justify-content: flex-start;
-            width: 330px;
+            justify-content: center;
+            width: 100%;
 
             a {
                 width: auto;
@@ -456,7 +456,7 @@ h2 {
         text-align: center;
         margin: 100px auto 0 auto;
         color: white;
-        width: 400px;
+        width: 300px;
     }
 
     .my-other-projects {
