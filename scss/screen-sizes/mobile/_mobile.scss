@@ -318,13 +318,13 @@ button {
             box-shadow: -10px 10px 30px;
             float: left;
             position: relative;
-            margin: 0 10px 0 10px;
+            margin: 0 10px 0 20px;
         }
     
         .text {
             @include mainFont;
-            width: 95%;
-            margin: 0 10px;
+            width: 90%;
+            margin: 0 20px;
     
             h3 {
                 font-size: 1rem;
