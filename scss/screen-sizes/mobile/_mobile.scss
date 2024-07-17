@@ -409,7 +409,7 @@ h2 {
                 }
             }
 
-            gap: 15px;
+            gap: 10px;
             margin: 20px auto 0 auto;
             justify-content: center;
             width: 100%;
@@ -423,7 +423,7 @@ h2 {
                 font-size: 0.8rem;
                 border: 1px solid white;
                 border-radius: 10px;
-                width: 130px;
+                width: 160px;
                 height: 50px;
                 color: white;
                 transition: 0.3s ease-in-out;
@@ -539,7 +539,7 @@ h2 {
     }
 
     p {
-        font-size: 1rem;
+        font-size: 0.8rem;
         text-align: center;
         color: white;
         
@@ -557,7 +557,7 @@ h2 {
         gap: 30px;
 
         h5 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             text-align: center;
             color: white;
         }
@@ -565,12 +565,12 @@ h2 {
         .name-and-link {
             @include flexRow;
 
-            @supports not (gap: 20px) {
+            @supports not (gap: 10px) {
                 > *:not(:last-child) {
-                    margin-right: 20px;
+                    margin-right: 10px;
                 }
             }
-            gap: 20px;
+            gap: 10px;
 
             p {
                 margin: 0;
@@ -579,14 +579,14 @@ h2 {
             .icon {
                 fill: white;
                 height: auto;
-                width: 27px;
-                margin-top: 5px;
+                width: 20px;
+                //margin-top: 5px;
 
-                @supports not (margin-top: 5px) {
-                    > *:not(:last-child) {
-                        margin-top: 0;
-                    }
-                }
+                //@supports not (margin-top: 5px) {
+                //    > *:not(:last-child) {
+                //        margin-top: 0;
+                //    }
+                //}
             }
 
         }
