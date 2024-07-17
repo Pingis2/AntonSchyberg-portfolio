@@ -22,7 +22,7 @@ function checkScroll() {
     const windowWidth = window.innerWidth;
 
     if (windowWidth > 344) {
-        if (scrollPercentage >= 25) {
+        if (scrollPercentage >= 15) {
             burgerMenu.style.display = 'none';
             burgerCurved.classList.remove('hidden');
         } else { 
