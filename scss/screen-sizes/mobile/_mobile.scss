@@ -308,7 +308,7 @@ button {
 
     .flex {
         height: auto;
-        width: 100%;
+        width: 95%;
         margin: 0 auto 0 auto;
     
         .profile-image {
@@ -323,7 +323,7 @@ button {
     
         .text {
             @include mainFont;
-            width: 320px;
+            width: 310px;
             margin-left: 10px;
     
             h3 {
@@ -451,7 +451,7 @@ h2 {
     }
 
     h3 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         @include mainFont;
         text-align: center;
         margin: 100px auto 0 auto;
