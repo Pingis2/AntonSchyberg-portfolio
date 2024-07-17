@@ -440,11 +440,11 @@ h2 {
                 }
             }
 
-            .button-project:hover {
-                background-color: #070F2B;
-                color: #fff700;
-                transform: scale(1.03);
-            }
+            //.button-project:hover {
+            //    background-color: #070F2B;
+            //    color: #fff700;
+            //    transform: scale(1.03);
+            //}
 
             
         }
@@ -484,8 +484,8 @@ h2 {
         border-radius: 10px;
     
         .small-project {
-            height: 170px;
-            width: 300px;
+            height: 120px;
+            width: 150px;
             overflow: hidden;
             display: flex;
             justify-content: center;
@@ -507,18 +507,41 @@ h2 {
             }
 
             img {
-                width: 350px;
-                height: auto;
                 transition: opacity .5s ease;
             }
 
-            &:hover img {
-                opacity: 0.3;
+            .surf-club {
+                width: 200px;
+                height: 120px;
             }
 
-            &:hover p {
-                opacity: 1;
+            .coloring-game {
+                width: 150px;
+                height: 120px;
             }
+
+            .swedish-quiz {
+                width: 250px;
+                height: auto;
+            }
+
+            .document-creator {
+                width: 200px;
+                height: 120px;
+            }
+
+            .webshop {
+                width: 200px;
+                height: 120px;
+            }
+
+            //&:hover img {
+            //    opacity: 0.3;
+            //}
+//
+            //&:hover p {
+            //    opacity: 1;
+            //}
         }
 
         
