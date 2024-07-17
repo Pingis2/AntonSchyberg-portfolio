@@ -4,6 +4,7 @@ import './other-projects-js/swedishQuiz.js';
 import './other-projects-js/webshop.js';
 import './other-projects-js/surfClub.js';
 import { saveScrollPosition, restoreScrollPosition } from './save-scroll-js/save-scroll.js';
+import './burger-menu/burger-menu.js'
 import './scss/main.scss';
 
 const loaderContainer = document.getElementById('loader-container');
