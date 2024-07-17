@@ -6,6 +6,10 @@ function openBurger() {
     burgerMenu.addEventListener('click', () => {
         burgerContent.classList.toggle('hidden');
     })
+
+    burgerCurved.addEventListener('click', () => {
+        burgerContent.classList.toggle('hidden');
+    })
 }
 
 openBurger();
