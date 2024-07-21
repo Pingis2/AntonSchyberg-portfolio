@@ -167,15 +167,17 @@ button {
     display: block;
     margin: 0 0 0 0;
     position: fixed;
+    z-index: 123;
 
     .burger {
         @include flexCol;
         gap: 10px;
         padding: 20px 20px 0 0;
+        align-items: flex-end;
         
         span {
             width: 40px;
-            height: 2px;
+            height: 3px;
             background-color: white;
         }
         
@@ -183,8 +185,48 @@ button {
 }
 
 .burger-content {
-    width: 50px;
-    height: 50px;
+    width: 130px;
+    height: auto;
+    backdrop-filter: blur(8px);
+
+    a {
+        text-decoration: none;
+        
+        li {
+            color: black;
+            list-style: none;
+            padding: 5px 0;
+            font-size: 1.2rem;
+            text-shadow: 1px 0 white, -1px 0 white, 0 1px white, 0 -1px white, 1px 1px white, -1px -1px white, 1px -1px white, -1px 1px white;
+            margin-left: 30px;
+        }
+    }
+}
+
+.burger-content a {
+    text-decoration: none;
+    position: absolute;
+    transform-origin: center;
+}
+
+.burger-content a:nth-child(1) {
+    transform: rotate(50deg) translateX(70px) rotate(-50deg);
+}
+
+.burger-content a:nth-child(2) {
+    transform: rotate(150deg) translateX(70px) rotate(-150deg);
+}
+
+.burger-content a:nth-child(3) {
+    transform: rotate(180deg) translateX(100px) rotate(-180deg);
+}
+
+.burger-content a:nth-child(4) {
+    transform: rotate(200deg) translateX(80px) rotate(-200deg);
+}
+
+.burger-content a:nth-child(5) {
+    transform: rotate(230deg) translateX(80px) rotate(-230deg);
 }
 
 .burger-curved{

@@ -24,10 +24,11 @@ function checkScroll() {
     if (windowWidth > 344) {
         if (scrollPercentage >= 15) {
             burgerMenu.style.display = 'none';
-            burgerCurved.classList.remove('hidden');
+            burgerCurved.style.display = 'flex';
+            burgerCurved.style.justifyContent = 'flex-end';
         } else { 
             burgerMenu.style.display = 'flex';
-            burgerCurved.classList.add('hidden');
+            burgerCurved.style.display = 'none';
         }
     } else {
         burgerMenu.style.display = 'flex';
