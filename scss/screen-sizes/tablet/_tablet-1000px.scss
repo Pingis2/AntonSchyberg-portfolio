@@ -161,6 +161,7 @@ header {
 .burger-menu {
     display: block;
     margin: 0 30px 0 0;
+    position: unset;
 
     .burger {
         @include flexCol;

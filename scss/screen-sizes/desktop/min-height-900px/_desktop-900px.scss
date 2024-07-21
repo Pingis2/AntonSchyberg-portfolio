@@ -430,6 +430,10 @@ h2 {
             box-shadow: 0 3px 5px;
             cursor: pointer;
 
+            .mobile-header {
+                display: none;
+            }
+
             p {
                 font-size: 1.7rem;
                 @include mainFont;
