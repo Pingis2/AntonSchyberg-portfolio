@@ -186,8 +186,8 @@ button {
 }
 
 .burger-content {
-    width: 150px;
-    height: 100vh;
+    width: 200px;
+    height: 1400px;
     background-color: #082752;
     border-left: 1px solid white;
     transition: right 0.5s ease-in-out;
@@ -198,9 +198,8 @@ button {
         li {
             color: white;
             list-style: none;
-            padding: 5px 0;
+            padding: 10px 0;
             font-size: 1.5rem;
-            //text-shadow: 1px 0 white, -1px 0 white, 0 1px white, 0 -1px white, 1px 1px white, -1px -1px white, 1px -1px white, -1px 1px white;
             margin-left: 10px;
         }
     }
@@ -209,8 +208,8 @@ button {
 
 .burger-close {
     position: relative;
-    width: 45px; /* Adjust the size as needed */
-    height: 45px; /* Adjust the size as needed */
+    width: 45px;
+    height: 45px;
     padding-top: 20px;
     margin-left: 5px;
 }
@@ -220,8 +219,8 @@ button {
     top: 50%;
     left: 50%;
     width: 100%;
-    height: 2px; /* Adjust the thickness as needed */
-    background-color: white; /* Adjust the color as needed */
+    height: 3px;
+    background-color: white;
     transform-origin: center;
     transition: all 0.3s ease;
 }
