@@ -27,7 +27,7 @@ body {
     position: fixed;
     top: 0;
     background: #000;
-    z-index: 2;
+    z-index: 3;
     animation: shrink-container 0.5s linear forwards;
 }
 
@@ -167,7 +167,7 @@ button {
     display: block;
     margin: 0 0 0 0;
     position: fixed;
-    z-index: 123;
+    z-index: 1;
 
     .burger {
         @include flexCol;
