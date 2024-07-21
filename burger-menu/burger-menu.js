@@ -4,13 +4,11 @@ const burgerClose = document.getElementById('burgerClose');
 
 function openBurger() {
     burgerMenu.addEventListener('click', () => {
-        burgerContent.classList.toggle('hidden');
-        burgerMenu.style.display = 'none';
+        burgerContent.classList.toggle('open');
     })
 
     burgerClose.addEventListener('click', () => {
-        burgerContent.classList.toggle('hidden');
-        burgerMenu.style.display = "flex";
+        burgerContent.classList.toggle('open');
     })
 }
 
