@@ -2,8 +2,6 @@ const burgerMenu = document.getElementById('burger');
 const burgerContent = document.getElementById('burgerContent');
 const burgerClose = document.getElementById('burgerClose');
 
-hideBurgerOnMobile();
-
 function openBurger() {
     burgerMenu.addEventListener('click', () => {
         burgerContent.classList.toggle('open');
@@ -14,6 +12,8 @@ function openBurger() {
     })
 }
 openBurger();
+
+/*
 
 function hideBurgerOnMobile() {
     if (sessionStorage.getItem('visibilityState') === 'gridpainter') {
@@ -31,3 +31,5 @@ function hideBurgerOnMobile() {
     }
 }
 
+hideBurgerOnMobile();
+*/
